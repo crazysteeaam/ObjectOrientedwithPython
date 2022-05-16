@@ -100,7 +100,7 @@ class JXBWindow(wx.Dialog):
         index = 0
         for jxb in jxb_list:
             self.listJXB.InsertItem(index, jxb[0])
-            self.lisLJXB.SetItem(index, 1, jxb[1])
+            self.listJXB.SetItem(index, 1, jxb[1])
             self.listJXB.SetItem(index, 2, jxb[2])
             self.listJXB.SetItem(index, 3, jxb[3])
             self.listJXB.SetItem(index, 4, jxb[4])
@@ -182,7 +182,7 @@ class JXBWindow(wx.Dialog):
             return None
         if data.check_jxb_id(jxbid):
             wx.MessageBox("该教学班号已经存在!")
-            self.inputText.JxbID.SetFocus()
+            self.inputTextJxbID.SetFocus()
             return None
         if not data.check_course_id(courseid):
             wx.MessageBox("该课程不存在! ")

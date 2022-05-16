@@ -4,7 +4,7 @@ import ui_main
 
 
 class ChangePasswordWindow(wx.Dialog):
-    def __int__(self, parent, title):
+    def __init__(self, parent, title):
         wx.Dialog.__init__(self, parent, title=title, size=(800, 600))
         panel = wx.Panel(self, wx.ID_ANY)
         # 创建控件

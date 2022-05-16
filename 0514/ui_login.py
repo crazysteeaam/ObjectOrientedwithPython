@@ -1,3 +1,4 @@
+import wx
 import data
 import ui_main
 
@@ -19,24 +20,24 @@ class LoginWindow(wx.Dialog):
         okBtn = wx.Button(panel, wx.ID_ANY, "登录")
         cancelBtn = wx.Button(panel, wx.ID_ANY, "取消")
 
-        topSizer = wx.BoxSizer(Wx.VERTICAL)
+        topSizer = wx.BoxSizer(wx.VERTICAL)
         userSizer = wx.BoxSizer(wx.HORIZONTAL)
-        passwordSizer = w.BoxSizer(wx.HORIZONTAL)
+        passwordSizer = wx.BoxSizer(wx.HORIZONTAL)
         usertypeSizer = wx.BoxSizer(wx.HORIZONTAL)
         btnSizer = wx.BoxSizer(wx.HORIZONTAL)
 
         userSizer.Add(labelUserID, 0, wx.ALL, 5)
-        userSizer.Add(self.irputTextUserID, O, wx.ALL, 5)
+        userSizer.Add(self.inputTextUserID, 0, wx.ALL, 5)
         passwordSizer.Add(labelPassword, 0, wx.ALL, 5)
-        passwordSizer.Add(self.irputTextPassword, 0, wx.ALL, 5)
-        usertypeSizer.Add(self.rboxluserType)
-        btnSizer.Add(okBtn, O, Wx.ALL, 5)
-        btnSizer.Add(cancelBtn, 0, Wx.ALL, 5)
+        passwordSizer.Add(self.inputTextPassword, 0, wx.ALL, 5)
+        usertypeSizer.Add(self.rboxUserType)
+        btnSizer.Add(okBtn, 0, wx.ALL, 5)
+        btnSizer.Add(cancelBtn, 0, wx.ALL, 5)
 
-        topSizer.Add(userSizer, 0, w.ALL | wx.CENTER, 5)
-        topSizer.Add(passwordSizer, 0, w.ALL | wx.CENTER, 5)
-        topSizer.Add(usertypeSizer, 0, w.ALL | wx.CENTER, 5)
-        topSizer.Add(btnsizer, 0, w.ALL | wx.CENTER, 5)
+        topSizer.Add(userSizer, 0, wx.ALL | wx.CENTER, 5)
+        topSizer.Add(passwordSizer, 0, wx.ALL | wx.CENTER, 5)
+        topSizer.Add(usertypeSizer, 0, wx.ALL | wx.CENTER, 5)
+        topSizer.Add(btnSizer, 0, wx.ALL | wx.CENTER, 5)
         panel.SetSizer(topSizer)
         topSizer.Fit(self)
         # 绑定事件
@@ -45,10 +46,10 @@ class LoginWindow(wx.Dialog):
 
     def onOk(self, e):
         # 事件处理函数:登录确认
-        userid = self.irputTextUserID.GetValue()
-        password = self.inputTextPasswordGetValue()
+        userid = self.inputTextUserID.GetValue()
+        password = self.inputTextPassword.GetValue()
         usertype = self.rboxUserType.GetStringSelection()
-        if len(userid.strip) == 0:
+        if len(userid.strip()) == 0:
             wx.MessageBox("请输入用户ID！")
             self.inputTextUserID.SetFocus()
             return None
@@ -57,12 +58,12 @@ class LoginWindow(wx.Dialog):
             self.inputTextPassword.SetFocus()
             return None
         username = data.check_login(userid, password, usertype)
-        if not usermame:
+        if not username:
             wx.MessageBox('用户名或密码或角色错误,请重新输入！')
             self.inputTextUserID.SetFocus()
         else:
             self.Close(True)  # 关闭窗口
-            title = "教务管理系统(登录:{0]{1}{2])".format(userid, username, usertype)
+            title = "教务管理系统(登录:{0}{1}{2})".format(userid, username, usertype)
             mainFrame = ui_main.MainWindow(None, title, userid, username, usertype)
             mainFrame.Show()  # 显示教务管理系统主窗口
             mainFrame.Center()  # 窗口居中

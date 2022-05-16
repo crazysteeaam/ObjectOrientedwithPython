@@ -19,6 +19,7 @@ class EditableListCtrl(wx.ListCtrl, listmix.TextEditMixin):
 class TeacherWindow(wx.Dialog):
     def __init__(self, parent, title, userid):
         wx.Frame.__init__(self, parent, title=title, size=(800, 600))
+        self.userid = userid
         panel = wx.Panel(self, wx.ID_ANY)
 
         # 创建控件
@@ -85,58 +86,58 @@ class TeacherWindow(wx.Dialog):
         index = 0
         for grade in grade_list:
             self.listGrade.InsertItem(index, grade[0])
-            self.lisLGrade.SetItem(index, 1, grade[1])
+            self.listGrade.SetItem(index, 1, grade[1])
             self.listGrade.SetItem(index, 2, grade[2])
             self.listGrade.SetItem(index, 3, grade[3])
-            if grade[4] == None:
+            if not grade[4]:
                 self.listGrade.SetItem(index, 4, "")
             else:
                 self.listGrade.SetItem(index, 4, str(grade[4]))
             index += 1
 
-        def onAction(self, e):
-            """事情处理函数:根据操作类型（插入、更新、删除）设置不同控件的状态"""
-            action = self.rboxAction.GetStringSelection()
-            if action == "选课":
-                self.inputTextJxbID.Enable()
-                self.insertBtn.Enable()
-                self.deleteBtn.Disable()
-            elif action == "退选":
-                self.inputTextJxbID.Disable()
-                self.insertBtn.Disable()
-                self.deleteBtn.Enable()
+    def onAction(self, e):
+        """事情处理函数:根据操作类型（插入、更新、删除）设置不同控件的状态"""
+        action = self.rboxAction.GetStringSelection()
+        if action == "选课":
+            self.inputTextJxbID.Enable()
+            self.insertBtn.Enable()
+            self.deleteBtn.Disable()
+        elif action == "退选":
+            self.inputTextJxbID.Disable()
+            self.insertBtn.Disable()
+            self.deleteBtn.Enable()
 
-        def onJxbID(self, e):
-            """事件处理函数，输入课程ID时检查其存在，并显示名称"""
-            jxbid = self.comBoxJxbID.GetValue()
-            if data.check_jxb_id(jxbid):
-                courseid, coursename, userid, username, description = data.check_jxb_id(jxbid)
-                self.inputTextCourseID.SetValue(courseid)
-                self.inputTextCourseName.SetValue(coursename)
-                self.inputTextDescription.SetValue(description)
-                self.populate_grade_list()
-            else:
-                wx.MessageBox("该课程计划不存在!")
-                self.inputTextCourseID.SetFocus()
-                return None
+    def onJxbID(self, e):
+        """事件处理函数，输入课程ID时检查其存在，并显示名称"""
+        jxbid = self.comBoxJxbID.GetValue()
+        if data.check_jxb_id(jxbid):
+            courseid, coursename, userid, username, description = data.check_jxb_id(jxbid)
+            self.inputTextCourseID.SetValue(courseid)
+            self.inputTextCourseName.SetValue(coursename)
+            self.inputTextDescription.SetValue(description)
+            self.populate_grade_list()
+        else:
+            wx.MessageBox("该课程计划不存在!")
+            self.inputTextCourseID.SetFocus()
+            return None
 
-        def onUpdate(self, e):
-            """事件处理函数:更新一条记录"""
-            jxbid = self.comBoxJxbID.GetValue()
-            if len(jxbid.strip()) == 0:
-                wx.MessageBox("请选择教学班号登录成绩!")
-                self.comBoxJxbID.SetFocus()
-                return None
-            grade_list = []
-            for index in range(self.listGrade.GetItemCount()):
-                userid = self.listGrade.GetItem(index, 0).GetText()
-                try:
-                    score = int(self.listGrade.GetItem(index, 4).GetText())
-                except:
-                    score = 0
-                grade_list.append([score, jxbid, userid])
-            data.update_grade_score(grade_list)
-            wx.MessageBox("成绩登录成功!")
+    def onUpdate(self, e):
+        """事件处理函数:更新一条记录"""
+        jxbid = self.comBoxJxbID.GetValue()
+        if len(jxbid.strip()) == 0:
+            wx.MessageBox("请选择教学班号登录成绩!")
+            self.comBoxJxbID.SetFocus()
+            return None
+        grade_list = []
+        for index in range(self.listGrade.GetItemCount()):
+            userid = self.listGrade.GetItem(index, 0).GetText()
+            try:
+                score = int(self.listGrade.GetItem(index, 4).GetText())
+            except:
+                score = 0
+            grade_list.append([score, jxbid, userid])
+        data.update_grade_score(grade_list)
+        wx.MessageBox("成绩登录成功!")
 
-        def onExit(self, e):
-            self.Close(True)
+    def onExit(self, e):
+        self.Close(True)
