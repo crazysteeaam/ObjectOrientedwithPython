@@ -23,7 +23,8 @@ def get_create_db(db_filename):
                             USERTYPE VARCHAR(2),
                             PASSWORD VARCHAR(20) NOT NULL);'''
         con.execute(sql_create_UserInfo)
-        sql_insert_UserInfo = '''INSERT INTO UserInfo VALUES("J001","张教务","女","1988/5/2","物理系","13912345678","教务","123456");'''
+        sql_insert_UserInfo = '''INSERT INTO UserInfo VALUES
+                                ('J001','张教务','女','1988/5/2','物理系','13912345678','教务','123456');'''
         con.execute(sql_insert_UserInfo)
         con.commit()
         # 在该数据库下创建课程信息表

@@ -32,7 +32,7 @@ class TeacherWindow(wx.Dialog):
         self.listGrade.InsertColumn(6, '成绩', width=100)
 
         labelJxbID = wx.StaticText(panel, wx.ID_ANY, '教学班号:')
-        self.inputTextJxbID = wx.TextCtrl(panel, wx.ID_ANY, '', style=wx.TE_PROCESS_ENTER)
+        # self.inputTextJxbID = wx.TextCtrl(panel, wx.ID_ANY, '', style=wx.TE_PROCESS_ENTER)
         self.comBoxJxbID = wx.ComboBox(panel, wx.ID_ANY, '', style=wx.CB_READONLY)
         labelCourseID = wx.StaticText(panel, wx.ID_ANY, '课程:')
         self.inputTextCourseID = wx.TextCtrl(panel, wx.ID_ANY, '', size=(50, 25))
