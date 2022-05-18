@@ -1,0 +1,21 @@
+1531537636441	geckodriver	INFO	geckodriver 0.21.0
+1531537636458	geckodriver	INFO	Listening on 127.0.0.1:61757
+1531537639400	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\jh\\AppData\\Local\\Temp\\rust_mozprofile.5C66zOwLOD8l"
+Unable to read VR Path Registry from C:\Users\jh\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\jh\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\jh\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\jh\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\jh\AppData\Local\openvr\openvrpaths.vrpath
+1531537641374	Marionette	INFO	Listening on port 61765
+1531537641533	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://image.baidu.com/, line 219: SyntaxError: 09 is not a legal ECMA-262 octal constant
+JavaScript warning: http://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=index&fr=&hs=0&xthttps=000000&sf=1&fmq=&pv=&ic=0&nc=1&z=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&word=%E5%BD%A9%E8%99%B9, line 919: SyntaxError: 09 is not a legal ECMA-262 octal constant
+[Parent 13172, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 1452, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 1452, Chrome_Chil[Parent 13172, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11772, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11772, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+[GPU 7872, Chrome_
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
