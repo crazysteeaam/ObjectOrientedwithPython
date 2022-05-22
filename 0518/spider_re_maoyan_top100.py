@@ -4,6 +4,7 @@ import re
 import json
 import csv
 import codecs
+from selenium import webdriver
 
 fake = faker.Factory.create()
 headers = {'Connection': 'keep-alive', 'User-Agent': fake.user_agent()}
