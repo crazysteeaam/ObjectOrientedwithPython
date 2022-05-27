@@ -1,13 +1,15 @@
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import urllib.request
 import time
 import os
+import faker
 
 
-class ImageBaiduSpider():
-    ''' 爬取百度图片中的图片 '''
+class ImageBaiduSpider:
+    """ 爬取百度图片中的图片 """
 
     def __init__(self, url, keyword, page_total, down_dir):
         self.url = url  # 主页网址
@@ -15,49 +17,43 @@ class ImageBaiduSpider():
         self.page_total = page_total  # 下载总页数
         self.down_dir = down_dir  # 下载保存地址
         # 百度图像页面中图像的路径
-        self.img_xpath = '//div[@class="imgpage"]/ul/li[@class="imgitem"]'
+        self.img_xpath = '//div[@class="imgpage"]/ul/li[@class="imgitem normal"]'
         self.img_dic = {}  # 保存图像url的字典：url:title
 
     def get_img_urls(self):
         """抓取图像的URL和title，存储到字典self.img_dic"""
-
         # 打开浏览器， 打开url的网页
-        driver = webdriver.Firefox()
+        driver = webdriver.Chrome(executable_path=r'D:\ProgramData\chromedriver.exe')
         driver.maximize_window()
         driver.get(self.url)
         # 模拟在百度图片搜索中输入关键字，并进行搜索
-        inputElement = driver.find_element_by_name('word')
+        inputElement = driver.find_element(by=By.NAME, value='word')
         inputElement.send_keys(self.keyword)
         inputElement.submit()
-        time.sleep(2)  # 睡眠2秒钟
-
-        page_i = 0
-
-        while page_i < self.page_total:
-            # 获取页面中图像的url和title，并保存到字典self.img_dic中
-            images = driver.find_elements_by_xpath(self.img_xpath)
-            for img in images:
-                img_title = self.replace_mark_with_underscore(img.get_attribute('data-title'))
-                img_url = img.get_attribute('data-objurl')
-                self.img_dic[img_url] = img_title
-                # print(self.img_dic[img_url])
-            # 模拟按【下一页】键，处理下一页
-            page_i += 1
-            action = ActionChains(driver).send_keys(Keys.DOWN)
-            action.perform()
+        time.sleep(5)  # 睡眠2秒钟
+        # 获取页面中图像的url和title，并保存到字典self.img_dic中
+        images = driver.find_elements(by=By.XPATH, value=self.img_xpath)
+        # print(images)
+        for img in images:
+            img_title = self.replace_mark_with_underscore(img.get_attribute('data-title'))
+            # print(img_title)
+            img_url = img.get_attribute('data-objurl')
+            # print(img_url)
+            self.img_dic[img_url] = img_title
+            print(self.img_dic[img_url])
         driver.close()
 
     def download(self):
         # 使用urllib.request.urlretrieve下载图像，使用opener加header，避免被屏蔽
         opener = urllib.request.build_opener()
-        opener.addheaders = [('User-Agent',
-                              'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1941.0 Safari/537.36')]
+        fake = faker.Factory.create()
+        opener.addheaders = [('User-Agent', fake.user_agent())]
         urllib.request.install_opener(opener)
         for url in self.img_dic:
             title = self.img_dic[url]
-            ext = url.split('/')[-1]
-            filename = title + '.' + ext
-            # print(filename)
+            ext = 'jpg'
+            filename = (title + '.' + ext).replace('?', '').replace(',', '').replace('_', '').replace('()', '')
+            print(filename)
             filepath = os.path.join(self.down_dir, filename)
             if os.path.exists(filepath):
                 print("已经存在：{0}".format(filepath))
@@ -79,7 +75,7 @@ class ImageBaiduSpider():
 
 
 if __name__ == "__main__":
-    url = "http://image.baidu.com"
+    url = "https://image.baidu.com"
     # 查询关键字
     keyword = "彩虹"
     # 下载的总页数

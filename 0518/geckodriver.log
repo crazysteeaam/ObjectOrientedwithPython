@@ -1,0 +1,143 @@
+1653303113166	geckodriver	INFO	Listening on 127.0.0.1:63351
+1653303115574	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63352" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jerry\\AppData\\Local\\Temp\\rust_mozprofilelnSmMA"
+1653303117266	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jerry\\AppData\\Local\\Temp\\rust_mozprofilelnSmMA\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63352/devtools/browser/55b4ee9a-ff8b-4c34-84a9-520b45d72276
+1653303122057	Marionette	INFO	Listening on port 63389
+Read port: 63389
+1653303122158	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://dlswbr.baidu.com/heicha/mw/abclite-2033-s.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://image.baidu.com"
+JavaScript warning: https://dlswbr.baidu.com/heicha/mw/abclite-2033-s.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1653303157417	Marionette	INFO	Stopped listening on port 63389
+[Parent 18136, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+[Parent 18136, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1653303403290	geckodriver	INFO	Listening on 127.0.0.1:53767
+1653303406387	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53768" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jerry\\AppData\\Local\\Temp\\rust_mozprofilePA6kfT"
+1653303407430	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jerry\\AppData\\Local\\Temp\\rust_mozprofilePA6kfT\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53768/devtools/browser/2a2c1e41-d979-4f09-84b6-0476101a19cb
+1653303412086	Marionette	INFO	Listening on port 53793
+Read port: 53793
+1653303412225	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://dlswbr.baidu.com/heicha/mw/abclite-2033-s.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://image.baidu.com"
+JavaScript warning: https://dlswbr.baidu.com/heicha/mw/abclite-2033-s.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1653303416616	Marionette	INFO	Stopped listening on port 53793
+[Parent 19956, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+[Parent 19956, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1653304046031	geckodriver	INFO	Listening on 127.0.0.1:60960
+1653304049121	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60961" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jerry\\AppData\\Local\\Temp\\rust_mozprofileGEppQs"
+1653304050043	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jerry\\AppData\\Local\\Temp\\rust_mozprofileGEppQs\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60961/devtools/browser/7246d43c-2519-4103-a10d-3d2bc52978d5
+1653304054994	Marionette	INFO	Listening on port 60991
+Read port: 60991
+1653304055087	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://dlswbr.baidu.com/heicha/mw/abclite-2033-s.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://image.baidu.com"
+JavaScript warning: https://dlswbr.baidu.com/heicha/mw/abclite-2033-s.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1653304059583	Marionette	INFO	Stopped listening on port 60991
+[Parent 21760, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+[Parent 21760, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1653304216941	geckodriver	INFO	Listening on 127.0.0.1:61149
+1653304220042	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61150" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jerry\\AppData\\Local\\Temp\\rust_mozprofileBUgf9B"
+1653304220842	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jerry\\AppData\\Local\\Temp\\rust_mozprofileBUgf9B\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61150/devtools/browser/febff4d7-4011-4b94-8dd7-63456265f229
+1653304225219	Marionette	INFO	Listening on port 61178
+Read port: 61178
+1653304225334	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://dlswbr.baidu.com/heicha/mw/abclite-2033-s.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://image.baidu.com"
+JavaScript warning: https://dlswbr.baidu.com/heicha/mw/abclite-2033-s.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1653304230832	Marionette	INFO	Stopped listening on port 61178
+[Parent 12712, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Child][PContentChild] Error: Send(msgname=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: Send(msgname=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: Send(msgname=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+[Parent 12712, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1653304507456	geckodriver	INFO	Listening on 127.0.0.1:61437
+1653304510529	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61438" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jerry\\AppData\\Local\\Temp\\rust_mozprofileZFX7aY"
+1653304511213	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jerry\\AppData\\Local\\Temp\\rust_mozprofileZFX7aY\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61438/devtools/browser/748c8e0a-4849-4a29-9709-f3c91f3b7b91
+1653304515476	Marionette	INFO	Listening on port 61471
+Read port: 61471
+1653304515623	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://dlswbr.baidu.com/heicha/mw/abclite-2033-s.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://image.baidu.com"
+JavaScript warning: https://dlswbr.baidu.com/heicha/mw/abclite-2033-s.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1653304520424	Marionette	INFO	Stopped listening on port 61471
+[Parent 19132, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+[Parent 19132, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1653304775551	geckodriver	INFO	Listening on 127.0.0.1:61722
+1653304778652	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61723" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jerry\\AppData\\Local\\Temp\\rust_mozprofileHiCL72"
+1653304779448	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jerry\\AppData\\Local\\Temp\\rust_mozprofileHiCL72\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61723/devtools/browser/7ae6b03a-f63c-4613-97ed-efdca3c92daa
+1653304784719	Marionette	INFO	Listening on port 61758
+Read port: 61758
+1653304784844	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://dlswbr.baidu.com/heicha/mw/abclite-2033-s.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://image.baidu.com"
+JavaScript warning: https://dlswbr.baidu.com/heicha/mw/abclite-2033-s.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1653304790453	Marionette	INFO	Stopped listening on port 61758
+[Parent 22124, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Child][PContentChild] Error: Send(msgname=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+[Parent 22124, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1653304991584	geckodriver	INFO	Listening on 127.0.0.1:65455
+1653304994660	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65456" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jerry\\AppData\\Local\\Temp\\rust_mozprofileL30Qx2"
+1653304995275	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jerry\\AppData\\Local\\Temp\\rust_mozprofileL30Qx2\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65456/devtools/browser/20f07860-2027-4cfb-aab2-0eeaebec033b
+1653304999167	Marionette	INFO	Listening on port 65492
+Read port: 65492
+1653304999284	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://dlswbr.baidu.com/heicha/mw/abclite-2033-s.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://image.baidu.com"
+JavaScript warning: https://dlswbr.baidu.com/heicha/mw/abclite-2033-s.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1653305003214	Marionette	INFO	Stopped listening on port 65492
+console.error: services.settings: 
+  main/query-stripping Signature failed  TypeError: NetworkError: Network request failed
+[Parent 9664, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1653305092508	geckodriver	INFO	Listening on 127.0.0.1:49228
+1653305095595	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49229" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jerry\\AppData\\Local\\Temp\\rust_mozprofileu86zFy"
+1653305096161	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jerry\\AppData\\Local\\Temp\\rust_mozprofileu86zFy\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49229/devtools/browser/9aba4e97-2af7-45c0-b6d5-a2f7929f0aa3
+1653305099033	Marionette	INFO	Listening on port 49257
+Read port: 49257
+1653305099133	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://dlswbr.baidu.com/heicha/mw/abclite-2033-s.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://image.baidu.com"
+JavaScript warning: https://dlswbr.baidu.com/heicha/mw/abclite-2033-s.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1653305103121	Marionette	INFO	Stopped listening on port 49257
+[Parent 15620, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+Invalid port. Exiting...
