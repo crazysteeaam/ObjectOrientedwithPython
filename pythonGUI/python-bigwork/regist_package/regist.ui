@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RegistWindow</class>
+ <widget class="QMainWindow" name="RegistWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>944</width>
+    <height>739</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>921</width>
+      <height>631</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/images/images/注册底层.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>177</x>
+      <y>120</y>
+      <width>611</width>
+      <height>410</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius:15px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>611</width>
+       <height>411</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="1" column="1">
+       <widget class="QGroupBox" name="groupBox_8">
+        <property name="title">
+         <string/>
+        </property>
+        <widget class="QLabel" name="label_8">
+         <property name="geometry">
+          <rect>
+           <x>15</x>
+           <y>10</y>
+           <width>256</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:white;
+border-radius:15px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_13">
+         <property name="geometry">
+          <rect>
+           <x>35</x>
+           <y>17</y>
+           <width>40</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size:20px;
+font-weight:bold;
+color:#3d3d3d;</string>
+         </property>
+         <property name="text">
+          <string>学号</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_3">
+         <property name="geometry">
+          <rect>
+           <x>85</x>
+           <y>17</y>
+           <width>181</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size:20px;</string>
+         </property>
+         <property name="placeholderText">
+          <string>请输入学号</string>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QGroupBox" name="groupBox_9">
+        <property name="title">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <widget class="QLabel" name="label_4">
+         <property name="geometry">
+          <rect>
+           <x>35</x>
+           <y>10</y>
+           <width>256</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:white;
+border-radius:15px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_7">
+         <property name="geometry">
+          <rect>
+           <x>55</x>
+           <y>17</y>
+           <width>40</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size:20px;
+font-weight:bold;
+color:#3d3d3d;</string>
+         </property>
+         <property name="text">
+          <string>姓名</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit">
+         <property name="geometry">
+          <rect>
+           <x>115</x>
+           <y>17</y>
+           <width>171</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size:20px;</string>
+         </property>
+         <property name="placeholderText">
+          <string>请输入姓名</string>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item row="8" column="0" colspan="2">
+       <widget class="QLabel" name="label_2">
+        <property name="styleSheet">
+         <string notr="true">font-weight:light;
+font-family:'Microsoft Yahei Light'</string>
+        </property>
+        <property name="text">
+         <string>
+COPYRIGHT@2021-2022 徐政杰
+面向对象程序设计—课程设计</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QGroupBox" name="groupBox_7">
+        <property name="title">
+         <string/>
+        </property>
+        <widget class="QLabel" name="label_9">
+         <property name="geometry">
+          <rect>
+           <x>15</x>
+           <y>10</y>
+           <width>256</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:white;
+border-radius:15px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_14">
+         <property name="geometry">
+          <rect>
+           <x>35</x>
+           <y>17</y>
+           <width>81</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size:20px;
+font-weight:bold;
+color:#3d3d3d;</string>
+         </property>
+         <property name="text">
+          <string>所属楼栋</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="comboBox">
+         <property name="geometry">
+          <rect>
+           <x>15</x>
+           <y>20</y>
+           <width>255</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox::down-arrow {
+	image: url(:/icons/icons/_下拉箭头小.png);
+	height:22px;
+	width:22px;
+	padding-right:5px;
+}
+QComboBox QAbstractItemView::item{
+	min-height: 34px;
+	selection-color:white;
+	selection-background-color: #B6B6B6;
+}
+QComboBox::drop-down{
+	border:0px solid gray;
+	border-radius:0px 15px 15px 0px;
+	background-color: rgb(255, 255, 255);
+}
+QComboBox{
+	combobox-popup: 0;
+	border:1px solid white;
+	font-size:15px;
+	padding-left:110px;
+}
+QComboBox QAbstractScrollArea QScrollBar:vertical{
+	width: 6px;
+	height:100px;
+	background-color: transparent;
+}
+QComboBox QAbstractScrollArea QScrollBar::handle:vertical{
+	border-radius: 3px;
+	background: rgba(255,255,255,0.1);
+}
+QComboBox QScrollBar::add-line::vertical{
+	border:none;
+}
+QComboBox QScrollBar::sub-line::vertical{
+	border:none;
+}</string>
+         </property>
+         <property name="editable">
+          <bool>false</bool>
+         </property>
+         <property name="placeholderText">
+          <string>请选择楼栋</string>
+         </property>
+        </widget>
+        <zorder>label_9</zorder>
+        <zorder>comboBox</zorder>
+        <zorder>label_14</zorder>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QGroupBox" name="groupBox_6">
+        <property name="title">
+         <string/>
+        </property>
+        <widget class="QLabel" name="label_5">
+         <property name="geometry">
+          <rect>
+           <x>35</x>
+           <y>10</y>
+           <width>256</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:white;
+border-radius:15px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_11">
+         <property name="geometry">
+          <rect>
+           <x>55</x>
+           <y>17</y>
+           <width>40</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size:20px;
+font-weight:bold;
+color:#3d3d3d;</string>
+         </property>
+         <property name="text">
+          <string>密码</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_2">
+         <property name="geometry">
+          <rect>
+           <x>115</x>
+           <y>17</y>
+           <width>171</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size:20px;</string>
+         </property>
+         <property name="placeholderText">
+          <string>请输入密码</string>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QGroupBox" name="groupBox_4">
+        <property name="title">
+         <string/>
+        </property>
+        <widget class="QLabel" name="label_6">
+         <property name="geometry">
+          <rect>
+           <x>35</x>
+           <y>10</y>
+           <width>256</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:white;
+border-radius:15px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_12">
+         <property name="geometry">
+          <rect>
+           <x>55</x>
+           <y>17</y>
+           <width>81</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size:20px;
+font-weight:bold;
+color:#3d3d3d;</string>
+         </property>
+         <property name="text">
+          <string>确认密码</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_4">
+         <property name="geometry">
+          <rect>
+           <x>145</x>
+           <y>17</y>
+           <width>141</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size:20px;</string>
+         </property>
+         <property name="placeholderText">
+          <string>再次输入密码</string>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QGroupBox" name="groupBox_2">
+        <widget class="QPushButton" name="pushButton_4">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>20</y>
+           <width>159</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:black;
+border-radius:15px;
+color:white;
+font-size:20px;
+font-weight:bold;</string>
+         </property>
+         <property name="text">
+          <string>重置</string>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QGroupBox" name="groupBox_5">
+        <property name="title">
+         <string/>
+        </property>
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>20</y>
+           <width>159</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:#a0021f;
+border-radius:15px;
+color:white;
+font-size:20px;
+font-weight:bold;</string>
+         </property>
+         <property name="text">
+          <string>注册</string>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QGroupBox" name="groupBox">
+        <property name="title">
+         <string/>
+        </property>
+        <widget class="QLabel" name="label_10">
+         <property name="geometry">
+          <rect>
+           <x>15</x>
+           <y>10</y>
+           <width>256</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:white;
+border-radius:15px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_15">
+         <property name="geometry">
+          <rect>
+           <x>35</x>
+           <y>17</y>
+           <width>61</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size:20px;
+font-weight:bold;
+color:#3d3d3d;</string>
+         </property>
+         <property name="text">
+          <string>寝室号</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_5">
+         <property name="geometry">
+          <rect>
+           <x>105</x>
+           <y>17</y>
+           <width>161</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size:20px;</string>
+         </property>
+         <property name="placeholderText">
+          <string>请输入寝室号</string>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item row="0" column="0" colspan="2">
+       <widget class="QLabel" name="label_3">
+        <property name="styleSheet">
+         <string notr="true">color:#a0021f;
+font-family:'Microsoft Yahei';
+font-size:32px;
+font-weight:bold;</string>
+        </property>
+        <property name="text">
+         <string>用户注册</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>30</y>
+      <width>26</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+border-image: url(:/icons/icons/关闭1.png);
+border:0px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>30</y>
+      <width>26</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;
+border-image: url(:/icons/icons/最小化1 (1).png);
+border:0px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

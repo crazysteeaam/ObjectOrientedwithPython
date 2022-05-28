@@ -1,0 +1,10 @@
+<RCC>
+  <qresource prefix="images">
+    <file>../images/注册底层.png</file>
+  </qresource>
+  <qresource prefix="icons">
+    <file>../icons/_下拉箭头小.png</file>
+    <file>../icons/关闭1.png</file>
+    <file>../icons/最小化1 (1).png</file>
+  </qresource>
+</RCC>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>696</width>
+    <height>396</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="label_backwhite">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>90</y>
+     <width>441</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/images/images/错误窗口底白.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_erroricon">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>120</y>
+     <width>23</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/icons/icons/错误.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="errortitle">
+   <property name="geometry">
+    <rect>
+     <x>184</x>
+     <y>118</y>
+     <width>160</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:black;
+font-family:'Microsoft Yahei';
+font-size:20px;</string>
+   </property>
+   <property name="text">
+    <string>来自客户端的提示</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>200</y>
+     <width>108</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:#1A73E8;
+color:white;
+font-size:20px;
+font-family:'Microsoft Yahei';
+font-weight:bold;
+border-radius:15px;</string>
+   </property>
+   <property name="text">
+    <string>关闭</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="errortext">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>156</y>
+     <width>331</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:black;
+font-size:16px;
+font-family:'Microsoft Yahei'</string>
+   </property>
+   <property name="text">
+    <string>用户名或密码输入错误</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resouce.qrc"/>
+ </resources>
+ <connections/>
+</ui>

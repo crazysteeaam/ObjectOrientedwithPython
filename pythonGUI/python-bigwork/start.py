@@ -10,7 +10,7 @@ if __name__ == "__main__":
     print(plugin_path)
     os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = plugin_path
     app = QApplication([])
-    window = QMainWindow()
-    ui = loginui.Ui_LoginWindow(app,window)
+    window = loginui.My_Window()
+    ui = loginui.Ui_LoginWindow(app, window)
     window.show()
     app.exec()

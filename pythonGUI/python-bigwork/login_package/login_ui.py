@@ -17,26 +17,41 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
                            QPalette, QPixmap, QRadialGradient, QTransform, QMouseEvent)
 from PySide6.QtWidgets import (QApplication, QLabel, QLineEdit, QMainWindow,
                                QPushButton, QSizePolicy, QWidget)
+from Crypto import Random
+import base64
+from Crypto.PublicKey import RSA
+from Crypto.Hash import SHA
+from Crypto.Signature import PKCS1_v1_5 as PKCS1_signature
+from Crypto.Cipher import PKCS1_v1_5 as PKCS1_cipher
 import login_package.resource_login as resource_login
+import login_package.login_data as login_data
+import errormessagebox_package.errormessagebox_ui as errormessagebox_ui
+import regist_package.regist_ui as regist_ui
 import sys
+import PySide6.QtWidgets as QtWidgets
+import ctypes
+
+ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("myappid")
 
 
-class Ui_LoginWindow(QWidget):
+class Ui_LoginWindow(QMainWindow):
     def __init__(self, app, window):
         super().__init__()
         self.m_flag = None
         self.m_Position = None
         self.ui = app
         self.loginwindow = window
-        self.setupUi(window)
+        self.setupUi(window)  # 初始化UI
+        self.add_shadow()  # 添加窗口阴影
 
     def setupUi(self, LoginWindow):
         if not LoginWindow.objectName():
             LoginWindow.setObjectName(u"LoginWindow")
         LoginWindow.resize(986, 695)
+        LoginWindow.setWindowIcon(QIcon("./icons/logo.png"))
         LoginWindow.setWindowFlags(Qt.FramelessWindowHint)
         LoginWindow.setAttribute(Qt.WA_TranslucentBackground)
-
+        LoginWindow.move(350, 200)
         self.centralwidget = QWidget(LoginWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.label_backwhite = QLabel(self.centralwidget)
@@ -121,23 +136,23 @@ class Ui_LoginWindow(QWidget):
         self.lineEdit_student_input = QLineEdit(self.centralwidget)
         self.lineEdit_student_input.setObjectName(u"lineEdit_student_input")
         self.lineEdit_student_input.setGeometry(QRect(700, 320, 181, 26))
+        self.lineEdit_student_input.setPlaceholderText("请输入学号")
         self.lineEdit_student_input.setStyleSheet(u"background-color:transparent;\n"
                                                   "border:0px;\n"
                                                   "font-size:20px;\n"
-                                                  "color:black;\n"
                                                   "selection-color: #cdcdcd;")
         self.lineEdit_password_input = QLineEdit(self.centralwidget)
         self.lineEdit_password_input.setObjectName(u"lineEdit_password_input")
         self.lineEdit_password_input.setEchoMode(QLineEdit.Password)  # 密码框隐藏
         self.lineEdit_password_input.setGeometry(QRect(700, 390, 181, 26))
+        self.lineEdit_password_input.setPlaceholderText("请输入密码")
         self.lineEdit_password_input.setStyleSheet(u"background-color:transparent;\n"
                                                    "border:0px;\n"
-                                                   "font-size:20px;\n"
-                                                   "color:black;")
+                                                   "font-size:20px;")
         self.pushButton_shutdown = QPushButton(self.centralwidget)
         self.pushButton_shutdown.setObjectName(u"pushButton_shutdown")
         self.pushButton_shutdown.setGeometry(QRect(880, 60, 35, 35))
-        self.pushButton_shutdown.setCursor(QCursor(Qt.ClosedHandCursor))
+        self.pushButton_shutdown.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton_shutdown.setStyleSheet(u"image: url(:/icons/icons/\u5173\u95ed.png);\n"
                                                "border:0;\n"
                                                "background-color:transparent;")
@@ -170,26 +185,50 @@ class Ui_LoginWindow(QWidget):
         self.pushButton_shutdown.clicked.connect(QCoreApplication.instance().quit)
         # 最小化按钮
         self.pushButton_minimize.clicked.connect(LoginWindow.showMinimized)
+        # 登录按钮
+        self.pushButton_login.clicked.connect(self.btn_login)
+        # 注册按钮
+        self.pushButton_regist.clicked.connect(self.btn_regist)
         self.retranslateUi(LoginWindow)
         QMetaObject.connectSlotsByName(LoginWindow)
+        LoginWindow.setWindowTitle("登录")
 
-        # setupUi
+    def btn_regist(self):
+        new_windows = My_Window()
+        self.regist = regist_ui.Ui_RegistWindow(new_windows)
+        self.regist.show()
 
-    def mousePressEvent(self, event):
-        if event.button() == Qt.LeftButton:
-            self.m_flag = True
-            self.m_Position = event.globalPos() - self.pos()  # 获取鼠标相对窗口的位置
-            event.accept()
-            self.setCursor(QCursor(Qt.OpenHandCursor))  # 更改鼠标图标
+    def btn_login(self) -> bool:
+        inputcode = self.lineEdit_student_input.text()
+        userpassword = self.lineEdit_password_input.text()
+        if inputcode == '' or userpassword == '':
+            self.error = errormessagebox_ui.Ui_ErrorMessageBox("用户名或密码为空！")
+            self.error.setupUi(QMainWindow())
+            self.error.show()
+            return False
+        rsaobject = RSA_encrypt()
+        proceed_password = rsaobject.encrypt_data(userpassword)
+        if login_data.validate_login(inputcode, proceed_password)==0:
+            self.error = errormessagebox_ui.Ui_ErrorMessageBox("学号尚未注册！")
+            self.error.setupUi(QMainWindow())
+            self.error.show()
+            return False
+        elif login_data.validate_login(inputcode, proceed_password)==1:
+            self.error = errormessagebox_ui.Ui_ErrorMessageBox("用户名或密码错误！")
+            self.error.setupUi(QMainWindow())
+            self.error.show()
+            return False
+        else:
+            return True
 
-    def mouseMoveEvent(self, QMouseEvent):
-        if Qt.LeftButton and self.m_flag:
-            self.move(QMouseEvent.globalPos() - self.m_Position)  # 更改窗口位置
-            QMouseEvent.accept()
-
-    def mouseReleaseEvent(self, QMouseEvent):
-        self.m_flag = False
-        self.setCursor(QCursor(Qt.ArrowCursor))
+    # 添加阴影
+    def add_shadow(self):
+        # 添加阴影
+        self.effect_shadow = QtWidgets.QGraphicsDropShadowEffect(self)
+        self.effect_shadow.setOffset(0, 0)  # 偏移
+        self.effect_shadow.setBlurRadius(6)  # 阴影半径
+        self.effect_shadow.setColor(Qt.gray)  # 阴影颜色
+        self.centralwidget.setGraphicsEffect(self.effect_shadow)  # 将设置套用到widget窗口中
 
     def retranslateUi(self, LoginWindow):
         LoginWindow.setWindowTitle(QCoreApplication.translate(
@@ -214,9 +253,52 @@ class Ui_LoginWindow(QWidget):
                                                       "\u9762\u5411\u5bf9\u8c61\u7a0b\u5e8f\u8bbe\u8ba1\u2014\u8bfe\u7a0b\u8bbe\u8ba1\n"
                                                       "Python PySide6\u5b9e\u73b0", None))
         self.lineEdit_student_input.setText("")
-        self.lineEdit_student_input.setPlaceholderText("")
         self.lineEdit_password_input.setText("")
-        self.lineEdit_password_input.setPlaceholderText("")
         self.pushButton_shutdown.setText("")
         self.pushButton_minimize.setText("")
-    # retranslateUi
+
+
+class My_Window(QMainWindow):
+    # 为窗口增加功能
+    def __init__(self):
+        super().__init__()
+        self.Move = None
+        self.Point = None
+
+    def mousePressEvent(self, event):  # 事件开始
+        if event.button() == Qt.LeftButton:
+            self.Move = True  # 设定bool为True
+            self.Point = event.globalPos() - self.pos()  # 记录起始点坐标
+            event.accept()
+
+    def mouseMoveEvent(self, QMouseEvent):  # 移动时间
+        if Qt.LeftButton and self.Move:  # 切记这里的条件不能写死，只要判断move和鼠标执行即可！
+            self.move(QMouseEvent.globalPos() - self.Point)  # 移动到鼠标到达的坐标点！
+            QMouseEvent.accept()
+
+    def mouseReleaseEvent(self, QMouseEvent):  # 结束事件
+        self.Move = False
+
+    def closeEvent(self, event):
+        # 重写关闭窗口事件，关闭窗口时触发以下事件
+        a = QtWidgets.QMessageBox.question(self, '退出', '你确定要退出吗?', QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No,
+                                           QtWidgets.QMessageBox.No)  # "退出"代表的是弹出框的标题,"你确认退出.."表示弹出框的内容
+        if a == QtWidgets.QMessageBox.Yes:
+            event.accept()  # 接受关闭事件
+        else:
+            event.ignore()  # 忽略关闭事件
+
+
+class RSA_encrypt(object):
+    # 前端加密数据
+    def get_key(self, key_file):
+        with open(key_file) as f:
+            data = f.read()
+            key = RSA.importKey(data)
+        return key
+
+    def encrypt_data(self, msg):
+        public_key = self.get_key('./rsa_public_key.pem')
+        cipher = PKCS1_cipher.new(public_key)
+        encrypt_text = base64.b64encode(cipher.encrypt(bytes(msg.encode("utf8"))))
+        return encrypt_text.decode('utf-8')
