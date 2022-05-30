@@ -346,7 +346,7 @@ class Ui_RegistWindow(QMainWindow):
         self.domlist = regist_data.get_domlist()
 
     def regist(self) -> bool:
-        # 注册按钮
+        # 注册按钮功能
         input_domname = self.comboBox.currentText()
         input_name = self.lineEdit.text()
         input_studentcode = self.lineEdit_3.text()
@@ -378,6 +378,7 @@ class Ui_RegistWindow(QMainWindow):
 
     def validate_input(self, input_name: str, input_studentcode: str, input_password: str, input_password_again: str,
                        input_domroom: str) -> bool:
+        # 前端代码，负责验证值是否合法
         if input_password != input_password_again:
             self.msg = "两次输入的密码不一致！"
             return False
@@ -396,6 +397,7 @@ class Ui_RegistWindow(QMainWindow):
         return True
 
     def retranslateUi(self):
+        # 赋值控件
         self.setWindowTitle(QCoreApplication.translate(
             "RegistWindow", u"MainWindow", None))
         self.label.setText("")
@@ -452,7 +454,7 @@ class Ui_RegistWindow(QMainWindow):
 
 
 class RSA_encrypt(object):
-    # 前端加密数据
+    # 前端代码，加密密码
     def get_key(self, key_file):
         with open(key_file) as f:
             data = f.read()
