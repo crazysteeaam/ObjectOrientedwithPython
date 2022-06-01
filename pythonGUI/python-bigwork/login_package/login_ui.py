@@ -194,7 +194,7 @@ class Ui_LoginWindow(QMainWindow):
         LoginWindow.setWindowTitle("登录")
 
     def btn_regist(self):
-        new_windows = My_Window()
+        new_windows = regist_ui.My_Window()
         self.regist = regist_ui.Ui_RegistWindow(new_windows)
         self.regist.show()
 

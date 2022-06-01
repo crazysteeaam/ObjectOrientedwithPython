@@ -1,0 +1,1625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Student_MainWindow</class>
+ <widget class="QMainWindow" name="Student_MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1055</width>
+    <height>671</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>40</y>
+      <width>928</width>
+      <height>619</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame {
+border-image: url(:/images/images/底层.png);
+}</string>
+    </property>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>257</width>
+       <height>619</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGroupBox {
+	background-image: url(:/images/images/主界面左底层.png);
+	border:0px;
+}</string>
+     </property>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>40</y>
+        <width>136</width>
+        <height>47</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QGroupBox{
+	border-radius:0px;
+	background-image:url();
+}</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QPushButton" name="pushButton">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>47</width>
+         <height>47</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/icons/icons/默认头像.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>2</y>
+         <width>41</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size:15px;
+font-family:'Microsoft Yahei';
+</string>
+       </property>
+       <property name="text">
+        <string>欢迎，</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>26</y>
+         <width>91</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size:15px;
+font-family:'Microsoft Yahei';</string>
+       </property>
+       <property name="text">
+        <string>徐政杰登录</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>110</y>
+        <width>227</width>
+        <height>106</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QGroupBox{
+	border-radius:15px;
+	background-image: url(:/images/images/次数红底矩形.png);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>33</x>
+         <y>17</y>
+         <width>84</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image:url();
+color:white;
+font-size:14px;
+font-weight:bold;
+</string>
+       </property>
+       <property name="text">
+        <string>您已提交抗原</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>60</y>
+         <width>16</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image:url();
+color:white;
+font-size:14px;
+font-weight:bold;
+</string>
+       </property>
+       <property name="text">
+        <string>次</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>48</x>
+         <y>40</y>
+         <width>121</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image:url();
+color:white;
+font-size:40px;
+font-weight:bold;
+</string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_4">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>240</y>
+        <width>190</width>
+        <height>39</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image:url();</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>10</y>
+         <width>19</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image:url();
+border-image: url(:/icons/icons/icon／核酸检测点.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>190</width>
+         <height>39</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:0px;
+border-radius:12px;
+background-color:#FFFFFF;
+font-size:14px;
+</string>
+       </property>
+       <property name="text">
+        <string>    抗原图片提交</string>
+       </property>
+      </widget>
+      <zorder>pushButton_2</zorder>
+      <zorder>label_6</zorder>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_5">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>290</y>
+        <width>190</width>
+        <height>39</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image:url();</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>10</y>
+         <width>19</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image:url();
+border-image: url(:/icons/icons/数据统计1.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>190</width>
+         <height>39</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:0px;
+border-radius:12px;
+font-size:14px;
+color:#D6D6D6;
+</string>
+       </property>
+       <property name="text">
+        <string>    历史数据统计</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_6">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>340</y>
+        <width>190</width>
+        <height>39</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image:url();</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>10</y>
+         <width>19</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image:url();
+border-image: url(:/icons/icons/SQL审核 (1).png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>190</width>
+         <height>39</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:0px;
+border-radius:12px;
+font-size:14px;
+color:#D6D6D6;
+</string>
+       </property>
+       <property name="text">
+        <string>    楼栋数据管理</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_7">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>400</y>
+        <width>139</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>141</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url();
+color:#D6D6D6;
+font-size:12px;</string>
+       </property>
+       <property name="text">
+        <string>所属楼栋：待填充</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>18</y>
+         <width>141</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url();
+color:#D6D6D6;
+font-size:12px;</string>
+       </property>
+       <property name="text">
+        <string>所属宿舍：待填充</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="pushButton_5">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>450</y>
+        <width>190</width>
+        <height>39</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:black;
+color:white;
+border-radius:12px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+font-weight:bold;
+font-size:15px;</string>
+      </property>
+      <property name="text">
+       <string>退出登录</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>530</y>
+        <width>113</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image: url(:/icons/icons/资源 1.png);
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>570</y>
+        <width>146</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:10px;
+font-family:'Microsoft Yahei Light';
+border-image: url();
+color:#A9A9A9;</string>
+      </property>
+      <property name="text">
+       <string>COPYRIGHT@2021-2022 徐政杰
+面向对象程序设计—课程设计
+Python PySide6实现</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="pushButton_6">
+     <property name="geometry">
+      <rect>
+       <x>830</x>
+       <y>20</y>
+       <width>27</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/icons/icons/最小化.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_7">
+     <property name="geometry">
+      <rect>
+       <x>870</x>
+       <y>20</y>
+       <width>27</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/icons/icons/关闭.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="geometry">
+      <rect>
+       <x>257</x>
+       <y>10</y>
+       <width>671</width>
+       <height>611</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:white;
+border-radius:15px;</string>
+     </property>
+     <property name="currentIndex">
+      <number>2</number>
+     </property>
+     <widget class="QWidget" name="page">
+      <widget class="QLabel" name="label_13">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>40</y>
+         <width>221</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-weight:bold;
+font-size:24px;
+color:#3D3D3D;</string>
+       </property>
+       <property name="text">
+        <string>正在进行的任务列表</string>
+       </property>
+      </widget>
+      <widget class="QScrollArea" name="scrollArea">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>90</y>
+         <width>671</width>
+         <height>521</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius:15px;
+
+QScrollBar::vertical {
+    background: transparent;
+    width:5px;
+    margin: 0 0 0 0;
+}
+
+QScrollBar::handle:vertical {
+    border-radius: 3px;
+	background: rgba(255,255,255,0.1);
+}
+
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+    border: 1px solid grey;
+    width: 3px;
+    height: 3px;
+    background: white;
+}
+
+</string>
+       </property>
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarAsNeeded</enum>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="sizeAdjustPolicy">
+        <enum>QAbstractScrollArea::AdjustIgnored</enum>
+       </property>
+       <property name="widgetResizable">
+        <bool>false</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>671</width>
+          <height>521</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius:15px;</string>
+        </property>
+        <widget class="QFrame" name="frame_8">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>-10</y>
+           <width>651</width>
+           <height>218</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:0px;
+border:1px solid #D8D8D8;
+</string>
+         </property>
+         <widget class="QLabel" name="label_16">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>20</y>
+            <width>45</width>
+            <height>45</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:#a0021f;
+border-image: url();
+border-radius:4px;
+color:white;
+font-size:15px;</string>
+          </property>
+          <property name="text">
+           <string>上传
+任务</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_17">
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>21</y>
+            <width>321</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:#3D3D3D;
+font-size:15px;</string>
+          </property>
+          <property name="text">
+           <string>5月18日抗原上传任务</string>
+          </property>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_8">
+          <property name="geometry">
+           <rect>
+            <x>490</x>
+            <y>21</y>
+            <width>115</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image:url();
+border-radius:20px;</string>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <widget class="QLabel" name="label_20">
+           <property name="geometry">
+            <rect>
+             <x>25</x>
+             <y>4</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-image:url();
+border-image: url(:/icons/icons/上传.png);
+background-color:transparent;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_11">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>115</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border:0px;
+border-radius:10px;
+font-size:12px;
+color:#000000;
+background-color:#D8D8D8;
+</string>
+           </property>
+           <property name="text">
+            <string>      上传图片</string>
+           </property>
+          </widget>
+          <zorder>pushButton_11</zorder>
+          <zorder>label_20</zorder>
+         </widget>
+         <widget class="QLabel" name="label_21">
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>44</y>
+            <width>321</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:#D6D6D6;
+font-size:15px;</string>
+          </property>
+          <property name="text">
+           <string>发布人：待填充</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_22">
+          <property name="geometry">
+           <rect>
+            <x>500</x>
+            <y>46</y>
+            <width>101</width>
+            <height>18</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:#D6D6D6;
+font-size:12px;
+border-image: url();
+border:0px;</string>
+          </property>
+          <property name="text">
+           <string>完成状态：待填充</string>
+          </property>
+         </widget>
+         <widget class="QGraphicsView" name="graphicsView">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>80</y>
+            <width>121</width>
+            <height>121</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/images/images/待上传图片.png);
+border-radius:5px;</string>
+          </property>
+         </widget>
+         <widget class="QGraphicsView" name="graphicsView_2">
+          <property name="geometry">
+           <rect>
+            <x>190</x>
+            <y>80</y>
+            <width>121</width>
+            <height>121</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/images/images/待上传图片.png);
+border-radius:5px;</string>
+          </property>
+         </widget>
+         <widget class="QGraphicsView" name="graphicsView_3">
+          <property name="geometry">
+           <rect>
+            <x>330</x>
+            <y>80</y>
+            <width>121</width>
+            <height>121</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/images/images/待上传图片.png);
+border-radius:5px;</string>
+          </property>
+         </widget>
+         <widget class="QGraphicsView" name="graphicsView_4">
+          <property name="geometry">
+           <rect>
+            <x>470</x>
+            <y>80</y>
+            <width>121</width>
+            <height>121</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/images/images/待上传图片.png);
+border-radius:5px;</string>
+          </property>
+         </widget>
+         <widget class="Line" name="line">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>216</y>
+            <width>611</width>
+            <height>1</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:black;
+background-color:#D8D8D8;
+border-image: url();</string>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_3">
+      <widget class="QLabel" name="label_14">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>40</y>
+         <width>241</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-weight:bold;
+font-size:24px;
+color:#3D3D3D;</string>
+       </property>
+       <property name="text">
+        <string>历史提交数据统计分析</string>
+       </property>
+      </widget>
+      <widget class="QScrollArea" name="scrollArea_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>90</y>
+         <width>671</width>
+         <height>521</height>
+        </rect>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>671</width>
+          <height>521</height>
+         </rect>
+        </property>
+        <widget class="QLabel" name="label_38">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>0</y>
+           <width>96</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size:16px;
+font-weight:bold;</string>
+         </property>
+         <property name="text">
+          <string>提交时间统计</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_39">
+         <property name="geometry">
+          <rect>
+           <x>340</x>
+           <y>0</y>
+           <width>111</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size:16px;
+font-weight:bold;</string>
+         </property>
+         <property name="text">
+          <string>月度提交率统计</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_40">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>230</y>
+           <width>96</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size:16px;
+font-weight:bold;</string>
+         </property>
+         <property name="text">
+          <string>提交历史详情</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="gridLayoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>29</x>
+           <y>259</y>
+           <width>601</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_2" rowstretch="1,1" columnstretch="3,2,2,2" rowminimumheight="3,2" columnminimumwidth="3,2,2,2">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetMinimumSize</enum>
+          </property>
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_47">
+            <property name="text">
+             <string>5月18日抗原提交</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_43">
+            <property name="styleSheet">
+             <string notr="true">background-color:#a0021f;
+border-image: url();
+color:white;
+font-weight:bold;
+border-radius:0px;
+border-bottom-left-radius:5px;
+border-top-left-radius:5px</string>
+            </property>
+            <property name="text">
+             <string>活动任务名称</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_45">
+            <property name="styleSheet">
+             <string notr="true">background-color:#a0021f;
+border-image: url();
+color:white;
+font-weight:bold;
+border-radius:0px;
+</string>
+            </property>
+            <property name="text">
+             <string>提交状态</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QFrame" name="frame_2">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QPushButton" name="pushButton_8">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>0</y>
+               <width>75</width>
+               <height>24</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>PushButton</string>
+             </property>
+            </widget>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLabel" name="label_48">
+            <property name="text">
+             <string>2022-05-21 06:25:30</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QLabel" name="label_46">
+            <property name="styleSheet">
+             <string notr="true">background-color:#a0021f;
+border-image: url();
+color:white;
+font-weight:bold;
+border-radius:0px;
+border-bottom-right-radius:5px;
+border-top-right-radius:5px</string>
+            </property>
+            <property name="text">
+             <string>提交图片查看</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QLabel" name="label_49">
+            <property name="text">
+             <string>待审查</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="label_44">
+            <property name="styleSheet">
+             <string notr="true">background-color:#a0021f;
+border-image: url();
+color:white;
+font-weight:bold;
+border-radius:0px;</string>
+            </property>
+            <property name="text">
+             <string>提交时间</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QFrame" name="frame_4">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>30</y>
+           <width>261</width>
+           <height>171</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+        <widget class="QFrame" name="frame_5">
+         <property name="geometry">
+          <rect>
+           <x>340</x>
+           <y>30</y>
+           <width>191</width>
+           <height>171</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_2">
+      <widget class="QLabel" name="label_15">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>40</y>
+         <width>241</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-weight:bold;
+font-size:24px;
+color:#3D3D3D;</string>
+       </property>
+       <property name="text">
+        <string>楼栋抗原综合管理平台</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_16">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>80</y>
+         <width>115</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:0px;
+border-radius:10px;
+font-size:12px;
+color:#000000;
+background-color:#D8D8D8;
+</string>
+       </property>
+       <property name="text">
+        <string>      创建任务</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_41">
+       <property name="geometry">
+        <rect>
+         <x>52</x>
+         <y>85</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:transparent;
+background-image:url();
+border-radius:0px;
+border-image: url(:/icons/icons/上传.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_42">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>120</y>
+         <width>105</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size:15px;
+font-weight:bold;</string>
+       </property>
+       <property name="text">
+        <string>历史任务一览表</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_53">
+       <property name="geometry">
+        <rect>
+         <x>154</x>
+         <y>125</y>
+         <width>151</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size:10px;</string>
+       </property>
+       <property name="text">
+        <string>当前管理楼栋：测试文本</string>
+       </property>
+      </widget>
+      <widget class="QScrollArea" name="scrollArea_3">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>150</y>
+         <width>601</width>
+         <height>169</height>
+        </rect>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents_3">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>601</width>
+          <height>169</height>
+         </rect>
+        </property>
+        <widget class="QWidget" name="gridLayoutWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>-1</y>
+           <width>601</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_3" columnstretch="3,2,3,3" columnminimumwidth="3,2,3,3">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_58">
+            <property name="styleSheet">
+             <string notr="true">background-color:#a0021f;
+border-image: url();
+color:white;
+font-weight:bold;
+border:0px;
+border-radius:0px;
+border-bottom-left-radius:5px;
+border-top-left-radius:5px;
+font-size:12px;</string>
+            </property>
+            <property name="text">
+             <string>活动任务名称</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="label_59">
+            <property name="styleSheet">
+             <string notr="true">background-color:#a0021f;
+border-image: url();
+color:white;
+border:0px;
+font-weight:bold;
+border-radius:0px;</string>
+            </property>
+            <property name="text">
+             <string>提交寝室数量</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QLabel" name="label_61">
+            <property name="styleSheet">
+             <string notr="true">background-color:#a0021f;
+border-image: url();
+color:white;
+font-weight:bold;
+border-radius:0px;
+border-bottom-right-radius:5px;
+border-top-right-radius:5px</string>
+            </property>
+            <property name="text">
+             <string>任务管理工具</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_60">
+            <property name="styleSheet">
+             <string notr="true">background-color:#a0021f;
+border-image: url();
+color:white;
+font-weight:bold;
+border-radius:0px;
+</string>
+            </property>
+            <property name="text">
+             <string>当前状态</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_50">
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLabel" name="label_51">
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QFrame" name="frame_3">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QFrame" name="frame_7">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_54">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>340</y>
+         <width>141</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size:15px;
+font-weight:bold;</string>
+       </property>
+       <property name="text">
+        <string>楼栋寝室情况一览表</string>
+       </property>
+      </widget>
+      <widget class="QScrollArea" name="scrollArea_4">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>370</y>
+         <width>241</width>
+         <height>190</height>
+        </rect>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents_4">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>241</width>
+          <height>190</height>
+         </rect>
+        </property>
+        <widget class="QWidget" name="gridLayoutWidget_3">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>241</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_4" columnstretch="2,3,3" columnminimumwidth="2,3,3">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item row="0" column="1">
+           <widget class="QLabel" name="label_63">
+            <property name="styleSheet">
+             <string notr="true">background-color:#a0021f;
+border-image: url();
+color:white;
+border:0px;
+font-weight:bold;
+border-radius:0px;</string>
+            </property>
+            <property name="text">
+             <string>寝室数量</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_62">
+            <property name="styleSheet">
+             <string notr="true">background-color:#a0021f;
+border-image: url();
+color:white;
+font-weight:bold;
+border:0px;
+border-radius:0px;
+border-bottom-left-radius:5px;
+border-top-left-radius:5px;
+font-size:12px;</string>
+            </property>
+            <property name="text">
+             <string>楼层</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_64">
+            <property name="styleSheet">
+             <string notr="true">background-color:#a0021f;
+border-image: url();
+color:white;
+font-weight:bold;
+border-radius:0px;
+border-bottom-right-radius:5px;
+border-top-right-radius:5px</string>
+            </property>
+            <property name="text">
+             <string>管理</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_52">
+            <property name="text">
+             <string>一层</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLabel" name="label_65">
+            <property name="text">
+             <string>25</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QFrame" name="frame_11">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QPushButton" name="pushButton_15">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>0</y>
+               <width>75</width>
+               <height>24</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>PushButton</string>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_55">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>340</y>
+         <width>141</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size:15px;
+font-weight:bold;</string>
+       </property>
+       <property name="text">
+        <string>楼栋累计提交率统计</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_56">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>370</y>
+         <width>101</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size:12px;</string>
+       </property>
+       <property name="text">
+        <string>历史综合提交比例</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_57">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>460</y>
+         <width>111</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size:12px;</string>
+       </property>
+       <property name="text">
+        <string>提交比例趋势图</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_6">
+       <property name="geometry">
+        <rect>
+         <x>490</x>
+         <y>350</y>
+         <width>149</width>
+         <height>128</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_9">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>490</y>
+         <width>301</width>
+         <height>105</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QFrame" name="frame_10">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>60</y>
+          <width>149</width>
+          <height>128</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <zorder>stackedWidget</zorder>
+    <zorder>groupBox_2</zorder>
+    <zorder>pushButton_6</zorder>
+    <zorder>pushButton_7</zorder>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

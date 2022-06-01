@@ -33,8 +33,30 @@ import re
 
 ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("myappid")
 
+class My_Window(QMainWindow):
+    # 为窗口增加功能
+    def __init__(self):
+        super().__init__()
+        self.Move = None
+        self.Point = None
 
-class Ui_RegistWindow(QMainWindow):
+    def mousePressEvent(self, event):  # 事件开始
+        if event.button() == Qt.LeftButton:
+            self.Move = True  # 设定bool为True
+            self.Point = event.globalPos() - self.pos()  # 记录起始点坐标
+            print(self.Point)
+            event.accept()
+
+    def mouseMoveEvent(self, QMouseEvent):  # 移动时间
+        if Qt.LeftButton and self.Move:  # 切记这里的条件不能写死，只要判断move和鼠标执行即可！
+            self.move(QMouseEvent.globalPos() - self.Point)  # 移动到鼠标到达的坐标点！
+            QMouseEvent.accept()
+
+    def mouseReleaseEvent(self, QMouseEvent):  # 结束事件
+        self.Move = False
+
+
+class Ui_RegistWindow(My_Window):
     def __init__(self, parent):
         super().__init__()
         self.msg = ""

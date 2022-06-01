@@ -1,0 +1,21 @@
+<RCC>
+  <qresource prefix="images">
+    <file>../images/待上传图片.png</file>
+    <file>../images/次数红底矩形.png</file>
+    <file>../images/主界面左底层.png</file>
+    <file>../images/底层.png</file>
+  </qresource>
+  <qresource prefix="icons">
+    <file>../icons/icon／核酸检测点(1).png</file>
+    <file>../icons/icon／核酸检测点.png</file>
+    <file>../icons/SQL审核 (1).png</file>
+    <file>../icons/SQL审核.png</file>
+    <file>../icons/关闭.png</file>
+    <file>../icons/默认头像.png</file>
+    <file>../icons/上传.png</file>
+    <file>../icons/数据统计.png</file>
+    <file>../icons/数据统计1.png</file>
+    <file>../icons/资源 1.png</file>
+    <file>../icons/最小化.png</file>
+  </qresource>
+</RCC>
