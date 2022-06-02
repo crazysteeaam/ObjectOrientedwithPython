@@ -11,7 +11,7 @@ def validate_login(inputcode: str, inputpassword: str) -> int:
     """
     This function is used to validate the user's login information.
     """
-    print(inputcode)
+    # print(inputcode)
     # print(inputpassword)
     conn = pymysql.connect(host='sh-cdb-3chov2j0.sql.tencentcdb.com', port=58932, user='root', password='Qqhh11191911',
                            database='obj_bigwork', charset='utf8')
@@ -20,15 +20,15 @@ def validate_login(inputcode: str, inputpassword: str) -> int:
         sql = "SELECT Password FROM Students WHERE StudentCode=%s"
         cur.execute(sql, inputcode)
         data = cur.fetchone()
-        print(data)
+        # print(data)
         if not data:
             return 0
         rsaobject = RSA_decrypt()
         password_decrypt = rsaobject.decrypt_data(inputpassword)
         password_right = rsaobject.decrypt_data(data[0])
-        print(password_decrypt, password_right)
+        # print(password_decrypt, password_right)
         if password_decrypt == password_right:
-            print("对了！")
+            # print("对了！")
             return 2
         else:
             return 1

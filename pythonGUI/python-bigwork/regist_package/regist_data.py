@@ -7,6 +7,25 @@ from Crypto.Signature import PKCS1_v1_5 as PKCS1_signature
 from Crypto.Cipher import PKCS1_v1_5 as PKCS1_cipher
 
 
+def check_roominlist(input_domname, input_domroom) -> bool:
+    """
+    检查寝室号是否存在
+    """
+    conn = pymysql.connect(host='sh-cdb-3chov2j0.sql.tencentcdb.com', port=58932, user='root', password='Qqhh11191911',
+                           database='obj_bigwork', charset='utf8')
+    try:
+        cur = conn.cursor()
+        sql = "SELECT RoomName FROM Dormitory,Room WHERE Dormitory.DormID=Room.DormID and DormName = %s and RoomName=%s"
+        cur.execute(sql, (input_domname, input_domroom))
+        data = cur.fetchone()
+        if data is None:
+            return False
+        else:
+            return True
+    finally:
+        conn.close()
+
+
 def get_domlist() -> list:
     """
     获取宿舍楼栋列表，显示在注册页面

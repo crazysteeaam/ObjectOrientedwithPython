@@ -7,6 +7,7 @@
 ##
 # WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
+import functools
 
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
                             QMetaObject, QObject, QPoint, QRect,
@@ -27,6 +28,7 @@ import login_package.resource_login as resource_login
 import login_package.login_data as login_data
 import errormessagebox_package.errormessagebox_ui as errormessagebox_ui
 import regist_package.regist_ui as regist_ui
+import student_mainwindow_package.studentmainwindow_ui as studentmainwindow_ui
 import sys
 import PySide6.QtWidgets as QtWidgets
 import ctypes
@@ -35,11 +37,10 @@ ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("myappid")
 
 
 class Ui_LoginWindow(QMainWindow):
-    def __init__(self, app, window):
+    def __init__(self, window):
         super().__init__()
         self.m_flag = None
         self.m_Position = None
-        self.ui = app
         self.loginwindow = window
         self.setupUi(window)  # 初始化UI
         self.add_shadow()  # 添加窗口阴影
@@ -186,7 +187,7 @@ class Ui_LoginWindow(QMainWindow):
         # 最小化按钮
         self.pushButton_minimize.clicked.connect(LoginWindow.showMinimized)
         # 登录按钮
-        self.pushButton_login.clicked.connect(self.btn_login)
+        self.pushButton_login.clicked.connect(functools.partial(self.btn_login, LoginWindow))
         # 注册按钮
         self.pushButton_regist.clicked.connect(self.btn_regist)
         self.retranslateUi(LoginWindow)
@@ -198,7 +199,7 @@ class Ui_LoginWindow(QMainWindow):
         self.regist = regist_ui.Ui_RegistWindow(new_windows)
         self.regist.show()
 
-    def btn_login(self) -> bool:
+    def btn_login(self, LoginWindow) -> bool:
         inputcode = self.lineEdit_student_input.text()
         userpassword = self.lineEdit_password_input.text()
         if inputcode == '' or userpassword == '':
@@ -208,18 +209,27 @@ class Ui_LoginWindow(QMainWindow):
             return False
         rsaobject = RSA_encrypt()
         proceed_password = rsaobject.encrypt_data(userpassword)
-        if login_data.validate_login(inputcode, proceed_password)==0:
+        if login_data.validate_login(inputcode, proceed_password) == 0:
             self.error = errormessagebox_ui.Ui_ErrorMessageBox("学号尚未注册！")
             self.error.setupUi(QMainWindow())
             self.error.show()
             return False
-        elif login_data.validate_login(inputcode, proceed_password)==1:
+        elif login_data.validate_login(inputcode, proceed_password) == 1:
             self.error = errormessagebox_ui.Ui_ErrorMessageBox("用户名或密码错误！")
             self.error.setupUi(QMainWindow())
             self.error.show()
             return False
+        elif login_data.validate_login(inputcode, proceed_password) == 2:
+            print("ok")
+            LoginWindow.hide()
+            MyMainwindow = My_Window()
+            self.mainwindow = studentmainwindow_ui.Ui_Student_MainWindow(MyMainwindow, inputcode)
+            self.mainwindow.show()
         else:
-            return True
+            self.error = errormessagebox_ui.Ui_ErrorMessageBox("出现奇怪错误，请重试或联系管理员！")
+            self.error.setupUi(QMainWindow())
+            self.error.show()
+            return False
 
     # 添加阴影
     def add_shadow(self):

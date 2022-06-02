@@ -386,6 +386,11 @@ class Ui_RegistWindow(My_Window):
             self.error.setupUi(QMainWindow())
             self.error.show()
             return False
+        if not regist_data.check_roominlist(input_domname,input_domroom):
+            self.error = errormessagebox_ui.Ui_ErrorMessageBox("房间在当前楼栋不存在！")
+            self.error.setupUi(QMainWindow())
+            self.error.show()
+            return False
         print("注册验证成功!")
         rsaobject = RSA_encrypt()
         input_password = rsaobject.encrypt_data(input_password)

@@ -6,6 +6,9 @@
     <file>../images/底层.png</file>
   </qresource>
   <qresource prefix="icons">
+    <file>../icons/公告.png</file>
+    <file>../icons/开关 关.png</file>
+    <file>../icons/开关 开.png</file>
     <file>../icons/icon／核酸检测点(1).png</file>
     <file>../icons/icon／核酸检测点.png</file>
     <file>../icons/SQL审核 (1).png</file>

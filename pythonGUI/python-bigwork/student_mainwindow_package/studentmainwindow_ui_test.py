@@ -32,6 +32,8 @@ class Ui_Student_MainWindow(object):
         if not Student_MainWindow.objectName():
             Student_MainWindow.setObjectName(u"Student_MainWindow")
         Student_MainWindow.resize(1055, 671)
+        Student_MainWindow.setWindowFlags(Qt.FramelessWindowHint)
+        Student_MainWindow.setAttribute(Qt.WA_TranslucentBackground)
         self.centralwidget = QWidget(Student_MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.frame = QFrame(self.centralwidget)
@@ -507,6 +509,13 @@ class Ui_Student_MainWindow(object):
         self.pushButton_15.setGeometry(QRect(30, 0, 75, 24))
 
         self.gridLayout_2.addWidget(self.frame_3, 2, 3, 1, 1)
+
+        self.label_100 = QLabel(self.gridLayoutWidget)
+        self.label_100.setObjectName(u"label_100")
+        self.label_100.setAlignment(Qt.AlignCenter)
+        self.label_100.setText("123")
+
+        self.gridLayout_2.addWidget(self.label_100, 3, 0, 1, 1)
 
         self.gridLayout_2.setColumnStretch(0, 3)
         self.gridLayout_2.setColumnStretch(1, 2)
