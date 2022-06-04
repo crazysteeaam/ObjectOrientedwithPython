@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>981</width>
-    <height>702</height>
+    <height>701</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -556,7 +556,7 @@ Python PySide6实现</string>
 border-radius:15px;</string>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="page">
       <widget class="QLabel" name="label_13">
@@ -582,22 +582,21 @@ color:#3D3D3D;</string>
         <rect>
          <x>0</x>
          <y>90</y>
-         <width>671</width>
+         <width>661</width>
          <height>521</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-radius:15px;
-
-QScrollBar::vertical {
+        <string notr="true">QScrollBar::vertical {
     background: transparent;
     width:5px;
-    margin: 0 0 0 0;
+	border-radius:15px;
+	background-image: url();
 }
 
 QScrollBar::handle:vertical {
     border-radius: 3px;
-	background: rgba(255,255,255,0.1);
+	background: #D8D8D8;
 }
 
 QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
@@ -627,7 +626,7 @@ QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
           <x>0</x>
           <y>0</y>
           <width>671</width>
-          <height>521</height>
+          <height>666</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -1072,20 +1071,47 @@ color:#3D3D3D;</string>
         <rect>
          <x>0</x>
          <y>90</y>
-         <width>671</width>
+         <width>666</width>
          <height>521</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">QScrollBar::vertical {
+    background: transparent;
+    width:5px;
+	border-radius:15px;
+	background-image: url();
+}
+
+QScrollBar::handle:vertical {
+    border-radius: 3px;
+	background: #D8D8D8;
+}
+
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+    border: 1px solid grey;
+    width: 3px;
+    height: 3px;
+    background: white;
+}
+</string>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
        <property name="widgetResizable">
-        <bool>true</bool>
+        <bool>false</bool>
        </property>
        <widget class="QWidget" name="scrollAreaWidgetContents_2">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
         <property name="geometry">
          <rect>
           <x>0</x>
           <y>0</y>
           <width>671</width>
-          <height>521</height>
+          <height>531</height>
          </rect>
         </property>
         <widget class="QLabel" name="label_38">
@@ -1108,9 +1134,9 @@ font-weight:bold;</string>
         <widget class="QLabel" name="label_39">
          <property name="geometry">
           <rect>
-           <x>340</x>
+           <x>420</x>
            <y>0</y>
-           <width>111</width>
+           <width>191</width>
            <height>21</height>
           </rect>
          </property>
@@ -1145,18 +1171,28 @@ font-weight:bold;</string>
            <x>29</x>
            <y>259</y>
            <width>601</width>
-           <height>71</height>
+           <height>271</height>
           </rect>
          </property>
-         <layout class="QGridLayout" name="gridLayout_2" rowstretch="2,3,3" columnstretch="3,2,2,2" rowminimumheight="2,3,3" columnminimumwidth="3,2,2,2">
+         <layout class="QGridLayout" name="gridLayout_2" rowstretch="2,3,3,3,3,3,3,3,3,3" columnstretch="3,2,2,2">
           <property name="sizeConstraint">
            <enum>QLayout::SetMinimumSize</enum>
           </property>
           <property name="spacing">
            <number>0</number>
           </property>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label_47">
+          <item row="1" column="2">
+           <widget class="QLabel" name="label_49">
+            <property name="text">
+             <string>待审查（测试）</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="label_86">
             <property name="styleSheet">
              <string notr="true">font-size:12px;</string>
             </property>
@@ -1168,73 +1204,40 @@ font-weight:bold;</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_43">
+          <item row="4" column="0">
+           <widget class="QLabel" name="label_71">
             <property name="styleSheet">
-             <string notr="true">background-color:#a0021f;
-border-image: url();
-color:white;
-font-weight:bold;
+             <string notr="true">font-size:12px;
+background-color:#EAEAEA;
 border-radius:0px;
 border-bottom-left-radius:5px;
-border-top-left-radius:5px</string>
+border-top-left-radius:5px;
+border-image: url();</string>
             </property>
             <property name="text">
-             <string>活动任务名称</string>
+             <string>5月18日抗原提交（测试）</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
             </property>
            </widget>
           </item>
-          <item row="0" column="2">
-           <widget class="QLabel" name="label_45">
+          <item row="6" column="0">
+           <widget class="QLabel" name="label_87">
             <property name="styleSheet">
-             <string notr="true">background-color:#a0021f;
-border-image: url();
-color:white;
-font-weight:bold;
+             <string notr="true">font-size:12px;
+background-color:#EAEAEA;
 border-radius:0px;
-</string>
+border-bottom-left-radius:5px;
+border-top-left-radius:5px;
+border-image: url();</string>
             </property>
             <property name="text">
-             <string>提交状态</string>
+             <string>5月18日抗原提交（测试）</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
             </property>
-           </widget>
-          </item>
-          <item row="1" column="3">
-           <widget class="QFrame" name="frame_2">
-            <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
-            </property>
-            <widget class="QPushButton" name="pushButton_8">
-             <property name="geometry">
-              <rect>
-               <x>44</x>
-               <y>4</y>
-               <width>42</width>
-               <height>18</height>
-              </rect>
-             </property>
-             <property name="cursor">
-              <cursorShape>PointingHandCursor</cursorShape>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius:8px;
-background-color:#1890FF;
-color:white;
-font-weight:bold;</string>
-             </property>
-             <property name="text">
-              <string>查看</string>
-             </property>
-            </widget>
            </widget>
           </item>
           <item row="1" column="1">
@@ -1266,42 +1269,41 @@ border-top-right-radius:5px</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="2">
-           <widget class="QLabel" name="label_49">
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_72">
+            <property name="styleSheet">
+             <string notr="true">font-size:12px;</string>
+            </property>
             <property name="text">
-             <string>待审查（测试）</string>
+             <string>5月18日抗原提交（测试）</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
             </property>
            </widget>
           </item>
-          <item row="0" column="1">
-           <widget class="QLabel" name="label_44">
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_45">
             <property name="styleSheet">
              <string notr="true">background-color:#a0021f;
 border-image: url();
 color:white;
 font-weight:bold;
-border-radius:0px;</string>
+border-radius:0px;
+</string>
             </property>
             <property name="text">
-             <string>提交时间</string>
+             <string>提交状态</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
             </property>
            </widget>
           </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_68">
+          <item row="7" column="0">
+           <widget class="QLabel" name="label_91">
             <property name="styleSheet">
-             <string notr="true">font-size:12px;
-background-color:#EAEAEA;
-border-radius:0px;
-border-bottom-left-radius:5px;
-border-top-left-radius:5px;
-border-image: url();</string>
+             <string notr="true">font-size:12px;</string>
             </property>
             <property name="text">
              <string>5月18日抗原提交（测试）</string>
@@ -1326,6 +1328,69 @@ border-image: url();</string>
             </property>
            </widget>
           </item>
+          <item row="1" column="3">
+           <widget class="QFrame" name="frame_2">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QPushButton" name="pushButton_8">
+             <property name="geometry">
+              <rect>
+               <x>44</x>
+               <y>6</y>
+               <width>42</width>
+               <height>18</height>
+              </rect>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-radius:8px;
+background-color:#1890FF;
+color:white;
+font-weight:bold;</string>
+             </property>
+             <property name="text">
+              <string>查看</string>
+             </property>
+            </widget>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_47">
+            <property name="styleSheet">
+             <string notr="true">font-size:12px;</string>
+            </property>
+            <property name="text">
+             <string>5月18日抗原提交（测试）</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0">
+           <widget class="QLabel" name="label_92">
+            <property name="styleSheet">
+             <string notr="true">font-size:12px;
+background-color:#EAEAEA;
+border-radius:0px;
+border-bottom-left-radius:5px;
+border-top-left-radius:5px;
+border-image: url();</string>
+            </property>
+            <property name="text">
+             <string>5月18日抗原提交（测试）</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
           <item row="2" column="2">
            <widget class="QLabel" name="label_70">
             <property name="styleSheet">
@@ -1335,6 +1400,41 @@ border-image: url();</string>
             </property>
             <property name="text">
              <string>待审查（测试）</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_68">
+            <property name="styleSheet">
+             <string notr="true">font-size:12px;
+background-color:#EAEAEA;
+border-radius:0px;
+border-bottom-left-radius:5px;
+border-top-left-radius:5px;
+border-image: url();</string>
+            </property>
+            <property name="text">
+             <string>5月18日抗原提交（测试）</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="label_44">
+            <property name="styleSheet">
+             <string notr="true">background-color:#a0021f;
+border-image: url();
+color:white;
+font-weight:bold;
+border-radius:0px;</string>
+            </property>
+            <property name="text">
+             <string>提交时间</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -1360,7 +1460,7 @@ border-image: url();</string>
              <property name="geometry">
               <rect>
                <x>44</x>
-               <y>4</y>
+               <y>6</y>
                <width>42</width>
                <height>18</height>
               </rect>
@@ -1380,6 +1480,38 @@ font-weight:bold;</string>
             </widget>
            </widget>
           </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_43">
+            <property name="styleSheet">
+             <string notr="true">background-color:#a0021f;
+border-image: url();
+color:white;
+font-weight:bold;
+border-radius:0px;
+border-bottom-left-radius:5px;
+border-top-left-radius:5px</string>
+            </property>
+            <property name="text">
+             <string>活动任务名称</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="0">
+           <widget class="QLabel" name="label_96">
+            <property name="styleSheet">
+             <string notr="true">font-size:12px;</string>
+            </property>
+            <property name="text">
+             <string>5月18日抗原提交（测试）</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
          </layout>
         </widget>
         <widget class="QFrame" name="frame_4">
@@ -1387,7 +1519,7 @@ font-weight:bold;</string>
           <rect>
            <x>30</x>
            <y>30</y>
-           <width>261</width>
+           <width>371</width>
            <height>171</height>
           </rect>
          </property>
@@ -1401,10 +1533,10 @@ font-weight:bold;</string>
         <widget class="QFrame" name="frame_5">
          <property name="geometry">
           <rect>
-           <x>340</x>
-           <y>30</y>
-           <width>271</width>
-           <height>171</height>
+           <x>420</x>
+           <y>20</y>
+           <width>211</width>
+           <height>231</height>
           </rect>
          </property>
          <property name="frameShape">
@@ -1412,6 +1544,26 @@ font-weight:bold;</string>
          </property>
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_26">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>200</y>
+           <width>341</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size:8px;
+margin-top:0px;
+color:grey;
+line-height:0px;
+</string>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;*注：此柱状图中蓝色表示该寝室历史提交时间所处时间段的分布情况，&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;绿色表示所处时间段账户所有者提交占总寝室提交占比的分布情况&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </widget>
@@ -1521,8 +1673,11 @@ font-weight:bold;</string>
          <height>169</height>
         </rect>
        </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
        <property name="widgetResizable">
-        <bool>true</bool>
+        <bool>false</bool>
        </property>
        <widget class="QWidget" name="scrollAreaWidgetContents_3">
         <property name="geometry">
@@ -1530,7 +1685,7 @@ font-weight:bold;</string>
           <x>0</x>
           <y>0</y>
           <width>601</width>
-          <height>169</height>
+          <height>172</height>
          </rect>
         </property>
         <widget class="QWidget" name="gridLayoutWidget_2">
@@ -1539,80 +1694,107 @@ font-weight:bold;</string>
            <x>0</x>
            <y>-1</y>
            <width>601</width>
-           <height>71</height>
+           <height>181</height>
           </rect>
          </property>
-         <layout class="QGridLayout" name="gridLayout_3" rowstretch="1,1,1" columnstretch="4,2,3,3" rowminimumheight="1,1,1" columnminimumwidth="3,2,3,3">
+         <layout class="QGridLayout" name="gridLayout_3" rowstretch="1,1,1,1,1,1,1,0" columnstretch="4,2,3,3" rowminimumheight="1,1,1,0,0,0,0,0" columnminimumwidth="3,2,3,3">
           <property name="spacing">
            <number>0</number>
           </property>
-          <item row="1" column="3">
-           <widget class="QFrame" name="frame_3">
-            <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_89">
+            <property name="styleSheet">
+             <string notr="true">background-color:#EAEAEA;
+border-radius:0px;
+border-bottom-left-radius:5px;
+border-top-left-radius:5px;
+border-image: url();</string>
             </property>
-            <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
+            <property name="text">
+             <string>5月19日抗原提交（测试）</string>
             </property>
-            <widget class="QPushButton" name="pushButton_32">
-             <property name="geometry">
-              <rect>
-               <x>31</x>
-               <y>3</y>
-               <width>42</width>
-               <height>18</height>
-              </rect>
-             </property>
-             <property name="cursor">
-              <cursorShape>PointingHandCursor</cursorShape>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius:8px;
-background-color:#1890FF;
-color:white;
-font-weight:bold;</string>
-             </property>
-             <property name="text">
-              <string>核查</string>
-             </property>
-            </widget>
-            <widget class="QPushButton" name="pushButton_33">
-             <property name="geometry">
-              <rect>
-               <x>77</x>
-               <y>3</y>
-               <width>42</width>
-               <height>18</height>
-              </rect>
-             </property>
-             <property name="cursor">
-              <cursorShape>PointingHandCursor</cursorShape>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius:8px;
-background-color:#EF8113;
-color:white;
-font-weight:bold;</string>
-             </property>
-             <property name="text">
-              <string>删除</string>
-             </property>
-            </widget>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
            </widget>
           </item>
-          <item row="0" column="3">
-           <widget class="QLabel" name="label_61">
+          <item row="4" column="0">
+           <widget class="QLabel" name="label_97">
+            <property name="styleSheet">
+             <string notr="true">background-color:#EAEAEA;
+border-radius:0px;
+border-bottom-left-radius:5px;
+border-top-left-radius:5px;
+border-image: url();</string>
+            </property>
+            <property name="text">
+             <string>5月19日抗原提交（测试）</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="label_59">
+            <property name="styleSheet">
+             <string notr="true">background-color:#a0021f;
+border-image: url();
+color:white;
+border:0px;
+font-weight:bold;
+border-radius:0px;</string>
+            </property>
+            <property name="text">
+             <string>提交寝室数量</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_58">
             <property name="styleSheet">
              <string notr="true">background-color:#a0021f;
 border-image: url();
 color:white;
 font-weight:bold;
+border:0px;
 border-radius:0px;
-border-bottom-right-radius:5px;
-border-top-right-radius:5px</string>
+border-bottom-left-radius:5px;
+border-top-left-radius:5px;
+font-size:12px;</string>
             </property>
             <property name="text">
-             <string>任务管理工具</string>
+             <string>活动任务名称</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_93">
+            <property name="text">
+             <string>5月18日抗原提交（测试）</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="label_99">
+            <property name="styleSheet">
+             <string notr="true">background-color:#EAEAEA;
+border-radius:0px;
+border-bottom-left-radius:5px;
+border-top-left-radius:5px;
+border-image: url();</string>
+            </property>
+            <property name="text">
+             <string>5月19日抗原提交（测试）</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -1647,6 +1829,25 @@ border-radius:0px;
             </property>
            </widget>
           </item>
+          <item row="0" column="3">
+           <widget class="QLabel" name="label_61">
+            <property name="styleSheet">
+             <string notr="true">background-color:#a0021f;
+border-image: url();
+color:white;
+font-weight:bold;
+border-radius:0px;
+border-bottom-right-radius:5px;
+border-top-right-radius:5px</string>
+            </property>
+            <property name="text">
+             <string>任务管理工具</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
           <item row="1" column="0">
            <widget class="QLabel" name="label_50">
             <property name="text">
@@ -1655,167 +1856,6 @@ border-radius:0px;
             <property name="alignment">
              <set>Qt::AlignCenter</set>
             </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QLabel" name="label_90">
-            <property name="styleSheet">
-             <string notr="true">background-color:#EAEAEA;
-border-radius:0px;
-border-image: url();</string>
-            </property>
-            <property name="text">
-             <string>9999/9999</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_58">
-            <property name="styleSheet">
-             <string notr="true">background-color:#a0021f;
-border-image: url();
-color:white;
-font-weight:bold;
-border:0px;
-border-radius:0px;
-border-bottom-left-radius:5px;
-border-top-left-radius:5px;
-font-size:12px;</string>
-            </property>
-            <property name="text">
-             <string>活动任务名称</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QLabel" name="label_59">
-            <property name="styleSheet">
-             <string notr="true">background-color:#a0021f;
-border-image: url();
-color:white;
-border:0px;
-font-weight:bold;
-border-radius:0px;</string>
-            </property>
-            <property name="text">
-             <string>提交寝室数量</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_89">
-            <property name="styleSheet">
-             <string notr="true">background-color:#EAEAEA;
-border-radius:0px;
-border-bottom-left-radius:5px;
-border-top-left-radius:5px;
-border-image: url();</string>
-            </property>
-            <property name="text">
-             <string>5月19日抗原提交（测试）</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="2">
-           <widget class="QFrame" name="frame_7">
-            <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
-            </property>
-            <widget class="QPushButton" name="pushButton_31">
-             <property name="geometry">
-              <rect>
-               <x>37</x>
-               <y>-2</y>
-               <width>29</width>
-               <height>29</height>
-              </rect>
-             </property>
-             <property name="cursor">
-              <cursorShape>PointingHandCursor</cursorShape>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-image: url(:/icons/icons/开关 关.png);</string>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-            <widget class="QLabel" name="label_85">
-             <property name="geometry">
-              <rect>
-               <x>70</x>
-               <y>4</y>
-               <width>54</width>
-               <height>16</height>
-              </rect>
-             </property>
-             <property name="text">
-              <string>任务结束</string>
-             </property>
-            </widget>
-            <widget class="QFrame" name="frame_20">
-             <property name="geometry">
-              <rect>
-               <x>100</x>
-               <y>20</y>
-               <width>150</width>
-               <height>23</height>
-              </rect>
-             </property>
-             <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
-             </property>
-             <widget class="QPushButton" name="pushButton_37">
-              <property name="geometry">
-               <rect>
-                <x>37</x>
-                <y>-2</y>
-                <width>29</width>
-                <height>29</height>
-               </rect>
-              </property>
-              <property name="cursor">
-               <cursorShape>PointingHandCursor</cursorShape>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">border-image: url(:/icons/icons/开关 关.png);</string>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-             <widget class="QLabel" name="label_93">
-              <property name="geometry">
-               <rect>
-                <x>70</x>
-                <y>4</y>
-                <width>54</width>
-                <height>16</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>任务结束</string>
-              </property>
-             </widget>
-            </widget>
            </widget>
           </item>
           <item row="2" column="2">
@@ -1972,6 +2012,137 @@ font-weight:bold;</string>
               <string>删除</string>
              </property>
             </widget>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="label_98">
+            <property name="text">
+             <string>5月18日抗原提交（测试）</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QFrame" name="frame_7">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QPushButton" name="pushButton_31">
+             <property name="geometry">
+              <rect>
+               <x>37</x>
+               <y>-2</y>
+               <width>29</width>
+               <height>29</height>
+              </rect>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-image: url(:/icons/icons/开关 关.png);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_85">
+             <property name="geometry">
+              <rect>
+               <x>70</x>
+               <y>4</y>
+               <width>54</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>任务结束</string>
+             </property>
+            </widget>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLabel" name="label_90">
+            <property name="styleSheet">
+             <string notr="true">background-color:#EAEAEA;
+border-radius:0px;
+border-image: url();</string>
+            </property>
+            <property name="text">
+             <string>9999/9999</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QFrame" name="frame_3">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QPushButton" name="pushButton_32">
+             <property name="geometry">
+              <rect>
+               <x>31</x>
+               <y>3</y>
+               <width>42</width>
+               <height>18</height>
+              </rect>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-radius:8px;
+background-color:#1890FF;
+color:white;
+font-weight:bold;</string>
+             </property>
+             <property name="text">
+              <string>核查</string>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="pushButton_33">
+             <property name="geometry">
+              <rect>
+               <x>77</x>
+               <y>3</y>
+               <width>42</width>
+               <height>18</height>
+              </rect>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-radius:8px;
+background-color:#EF8113;
+color:white;
+font-weight:bold;</string>
+             </property>
+             <property name="text">
+              <string>删除</string>
+             </property>
+            </widget>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="label_100">
+            <property name="text">
+             <string>5月18日抗原提交（测试）</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
            </widget>
           </item>
          </layout>

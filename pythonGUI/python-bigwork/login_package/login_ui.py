@@ -164,6 +164,14 @@ class Ui_LoginWindow(QMainWindow):
         self.pushButton_minimize.setStyleSheet(u"image: url(:/icons/icons/\u6700\u5c0f\u5316.png);\n"
                                                "border:0;\n"
                                                "background-color:transparent;")
+        self.label_1 = QLabel(self.centralwidget)
+        self.label_1.setGeometry(QRect(750, 425, 140, 20))
+        self.label_1.setStyleSheet(u"color:grey;\n"
+                                   "font-family:'Microsoft Yahei Light';\n"
+                                   "font-size:10px;")
+        self.label_1.setAlignment(Qt.AlignCenter)
+        self.label_1.setObjectName(u"label_1")
+        self.label_1.setText(u"使用本平台时请勿使用网络代理")
         LoginWindow.setCentralWidget(self.centralwidget)
         self.label_backwhite.raise_()
         self.label_bigtitle.raise_()
@@ -180,6 +188,8 @@ class Ui_LoginWindow(QMainWindow):
         self.lineEdit_password_input.raise_()
         self.pushButton_shutdown.raise_()
         self.pushButton_minimize.raise_()
+        self.lineEdit_student_input.setFocus()
+        self.label_1.raise_()
 
         # 按钮绑定事件
         # 关闭按钮

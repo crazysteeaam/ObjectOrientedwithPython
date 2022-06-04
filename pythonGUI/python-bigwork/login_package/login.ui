@@ -314,6 +314,24 @@ background-color:transparent;</string>
      <string/>
     </property>
    </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>426</y>
+      <width>141</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:grey;
+font-size:10px;
+font-family:'Microsoft Yahei Light';</string>
+    </property>
+    <property name="text">
+     <string>使用本平台时请勿使用网络代理</string>
+    </property>
+   </widget>
    <zorder>label_backwhite</zorder>
    <zorder>label_bigtitle</zorder>
    <zorder>label_donghualogo</zorder>
@@ -329,6 +347,7 @@ background-color:transparent;</string>
    <zorder>lineEdit_password_input</zorder>
    <zorder>pushButton_shutdown</zorder>
    <zorder>pushButton_minimize</zorder>
+   <zorder>label</zorder>
   </widget>
  </widget>
  <resources>
