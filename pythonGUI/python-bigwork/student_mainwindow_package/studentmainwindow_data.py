@@ -326,5 +326,24 @@ def close_task(taskid: str) -> bool:
         conn.close()
 
 
+def delete_task(taskid: str) -> bool:
+    """
+    删除任务
+    """
+    conn = pymysql.connect(host='sh-cdb-3chov2j0.sql.tencentcdb.com', port=58932, user='root', password='Qqhh11191911',
+                           database='obj_bigwork', charset='utf8')
+    cursor = conn.cursor()
+    sql = "delete from Task where TaskID = %s"
+    try:
+        cursor.execute(sql, taskid)
+        conn.commit()
+        return True
+    except Exception as e:
+        print("Error:" + str(e))
+        return False
+    finally:
+        conn.close()
+
+
 if __name__ == '__main__':
     print(check_task_status("10"))

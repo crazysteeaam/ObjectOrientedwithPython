@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>../icons/天猫提示-提示 (1).png</file>
+  </qresource>
+  <qresource prefix="images">
+    <file>../images/错误窗口底白.png</file>
+  </qresource>
+</RCC>
