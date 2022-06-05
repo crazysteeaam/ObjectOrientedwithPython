@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="icons"/>
+  <qresource prefix="images">
+    <file>../images/小中型底层白.png</file>
+  </qresource>
+</RCC>

@@ -345,5 +345,59 @@ def delete_task(taskid: str) -> bool:
         conn.close()
 
 
+def get_dormrate(dormid: str) -> float:
+    """
+    获取楼栋完成率
+    """
+    conn = pymysql.connect(host='sh-cdb-3chov2j0.sql.tencentcdb.com', port=58932, user='root', password='Qqhh11191911',
+                           database='obj_bigwork', charset='utf8')
+    cursor = conn.cursor()
+    sql = "call proc_getdormrate(%s)"
+    try:
+        cursor.execute(sql, dormid)
+        result = cursor.fetchone()
+        return result[0]
+    except:
+        print("Error")
+    finally:
+        conn.close()
+
+
+def get_everytaskrate(dormid: str) -> tuple:
+    """
+    获取楼栋所有任务完成率
+    """
+    conn = pymysql.connect(host='sh-cdb-3chov2j0.sql.tencentcdb.com', port=58932, user='root', password='Qqhh11191911',
+                           database='obj_bigwork', charset='utf8')
+    cursor = conn.cursor()
+    sql = "call proc_get_everytaskrate(%s)"
+    try:
+        cursor.execute(sql, dormid)
+        result = cursor.fetchall()
+        return result
+    except Exception as e:
+        print("Error:" + str(e))
+    finally:
+        conn.close()
+
+
+def get_alltaskrate() -> tuple:
+    """
+    获取全体所有任务完成率
+    """
+    conn = pymysql.connect(host='sh-cdb-3chov2j0.sql.tencentcdb.com', port=58932, user='root', password='Qqhh11191911',
+                           database='obj_bigwork', charset='utf8')
+    cursor = conn.cursor()
+    sql = "call proc_get_alltaskrate"
+    try:
+        cursor.execute(sql)
+        result = cursor.fetchall()
+        return result
+    except Exception as e:
+        print("Error:" + str(e))
+    finally:
+        conn.close()
+
+
 if __name__ == '__main__':
-    print(check_task_status("10"))
+    print(get_alltaskrate())

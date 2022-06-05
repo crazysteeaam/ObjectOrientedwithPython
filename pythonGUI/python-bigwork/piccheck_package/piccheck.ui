@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>565</width>
+    <height>554</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>30</y>
+     <width>484</width>
+     <height>493</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/小中型底层白.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>50</y>
+     <width>140</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-weight:bold;
+font-size:20px;</string>
+   </property>
+   <property name="text">
+    <string>提交图片查看器</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>83</x>
+     <y>89</y>
+     <width>402</width>
+     <height>351</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:#EFEFEF;
+border-radius:15px;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>201</width>
+      <height>174</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#A79B9B;
+font-size:15px;
+font-weight:bold;
+border-radius:0px;
+border-top-left-radius:15px;</string>
+    </property>
+    <property name="text">
+     <string>暂无</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>174</y>
+      <width>201</width>
+      <height>174</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#A79B9B;
+font-size:15px;
+font-weight:bold;
+border-radius:0px;
+border-bottom-left-radius:15px;</string>
+    </property>
+    <property name="text">
+     <string>暂无</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>201</x>
+      <y>174</y>
+      <width>201</width>
+      <height>174</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#A79B9B;
+font-size:15px;
+font-weight:bold;
+border-radius:0px;
+border-bottom-right-radius:15px;</string>
+    </property>
+    <property name="text">
+     <string>暂无</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>201</x>
+      <y>0</y>
+      <width>201</width>
+      <height>174</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#A79B9B;
+font-size:15px;
+font-weight:bold;
+border-radius:0px;
+border-top-right-radius:15px;</string>
+    </property>
+    <property name="text">
+     <string>暂无</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>454</y>
+     <width>108</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:#1A73E8;
+color:white;
+font-size:20px;
+font-family:'Microsoft Yahei';
+font-weight:bold;
+border-radius:15px;</string>
+   </property>
+   <property name="text">
+    <string>关闭</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

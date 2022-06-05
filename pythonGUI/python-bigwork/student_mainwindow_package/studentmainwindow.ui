@@ -2807,11 +2807,15 @@ font-weight:bold;</string>
       <widget class="QFrame" name="frame_6">
        <property name="geometry">
         <rect>
-         <x>490</x>
-         <y>350</y>
-         <width>149</width>
-         <height>128</height>
+         <x>438</x>
+         <y>357</y>
+         <width>221</width>
+         <height>121</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url();
+background-color:transparent</string>
        </property>
        <property name="frameShape">
         <enum>QFrame::StyledPanel</enum>
@@ -2826,7 +2830,7 @@ font-weight:bold;</string>
          <x>340</x>
          <y>490</y>
          <width>301</width>
-         <height>105</height>
+         <height>111</height>
         </rect>
        </property>
        <property name="frameShape">
@@ -2835,22 +2839,6 @@ font-weight:bold;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QFrame" name="frame_10">
-        <property name="geometry">
-         <rect>
-          <x>70</x>
-          <y>60</y>
-          <width>149</width>
-          <height>128</height>
-         </rect>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::StyledPanel</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
-        </property>
-       </widget>
       </widget>
       <widget class="QPushButton" name="pushButton_34">
        <property name="geometry">
