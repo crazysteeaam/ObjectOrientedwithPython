@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>../icons/关闭.png</file>
+    <file>../icons/最小化.png</file>
+  </qresource>
+  <qresource prefix="images">
+    <file>../images/小中型底层白.png</file>
+  </qresource>
+</RCC>
