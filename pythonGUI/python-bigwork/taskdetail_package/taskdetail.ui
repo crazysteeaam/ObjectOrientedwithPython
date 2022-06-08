@@ -13,19 +13,6 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>220</x>
-     <y>60</y>
-     <width>81</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>延安路xx宿舍</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
@@ -93,7 +80,7 @@ border:0px;</string>
        <height>81</height>
       </rect>
      </property>
-     <layout class="QGridLayout" name="gridLayout_4" rowstretch="0,0,0" columnstretch="1,4,3,0">
+     <layout class="QGridLayout" name="gridLayout_4" rowstretch="0,0,0" columnstretch="1,4,3,1">
       <property name="spacing">
        <number>0</number>
       </property>
@@ -155,56 +142,10 @@ font-size:12px;</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="1">
-       <widget class="QLabel" name="label_6">
-        <property name="styleSheet">
-         <string notr="true">border-bottom:1px solid #eaeaea;</string>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="label_5">
-        <property name="styleSheet">
-         <string notr="true">border-bottom:1px solid #eaeaea;</string>
-        </property>
-        <property name="text">
-         <string>6602</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
       <item row="2" column="0">
        <widget class="QLabel" name="label_8">
         <property name="text">
          <string>6603</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="1">
-       <widget class="QLabel" name="label_9">
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="2">
-       <widget class="QLabel" name="label_10">
-        <property name="text">
-         <string>TextLabel</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -227,8 +168,8 @@ font-size:12px;</string>
         <widget class="QPushButton" name="pushButton">
          <property name="geometry">
           <rect>
-           <x>31</x>
-           <y>3</y>
+           <x>20</x>
+           <y>2</y>
            <width>51</width>
            <height>21</height>
           </rect>
@@ -249,8 +190,8 @@ font-weight:bold;</string>
         <widget class="QPushButton" name="pushButton_2">
          <property name="geometry">
           <rect>
-           <x>87</x>
-           <y>3</y>
+           <x>80</x>
+           <y>2</y>
            <width>51</width>
            <height>21</height>
           </rect>
@@ -268,6 +209,59 @@ font-weight:bold;</string>
           <string>撤回</string>
          </property>
         </widget>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLabel" name="label_10">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="label_6">
+        <property name="styleSheet">
+         <string notr="true">border-bottom:1px solid #eaeaea;</string>
+        </property>
+        <property name="text">
+         <string>2022-06-08 22:00:16</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_5">
+        <property name="styleSheet">
+         <string notr="true">border-bottom:1px solid #eaeaea;</string>
+        </property>
+        <property name="text">
+         <string>6602</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="label_9">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
        </widget>
       </item>
      </layout>
@@ -315,14 +309,17 @@ font-weight:bold;</string>
   <widget class="QLabel" name="label_12">
    <property name="geometry">
     <rect>
-     <x>180</x>
+     <x>30</x>
      <y>65</y>
-     <width>141</width>
-     <height>16</height>
+     <width>461</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="text">
     <string>任务xxxxxx'x（测试文本）</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
    </property>
   </widget>
  </widget>
