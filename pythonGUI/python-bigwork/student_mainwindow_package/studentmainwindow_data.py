@@ -399,5 +399,24 @@ def get_alltaskrate() -> tuple:
         conn.close()
 
 
+def pic_check_successfully(taskid, studentcode):
+    """
+    若图片验证成功，将任务状态改为验证通过
+    """
+    conn = pymysql.connect(host='sh-cdb-3chov2j0.sql.tencentcdb.com', port=58932, user='root', password='Qqhh11191911',
+                           database='obj_bigwork', charset='utf8')
+    cursor = conn.cursor()
+    sql = "update PicURL set isConfirmed = 1 where TaskID = %s and StudentCode=%s"
+    try:
+        cursor.execute(sql, (taskid, studentcode))
+        conn.commit()
+        return True
+    except Exception as e:
+        print("Error:" + str(e))
+        return False
+    finally:
+        conn.close()
+
+
 if __name__ == '__main__':
     print(get_alltaskrate())

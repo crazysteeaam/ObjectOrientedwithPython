@@ -22,6 +22,8 @@ import piccheck_package.piccheck_data as piccheck_data
 import requests
 from PIL import Image, ImageQt
 import io
+import asyncio
+import aiohttp
 
 
 class My_Window(QWidget):
@@ -47,7 +49,7 @@ class My_Window(QWidget):
         self.Move = False
 
 
-class Ui_PicCheck(QWidget):
+class Ui_PicCheck(My_Window):
     def __init__(self, parent, taskid, roomid):
         super().__init__()
         self.taskid = taskid
@@ -79,6 +81,7 @@ class Ui_PicCheck(QWidget):
         self.frame.setFrameShadow(QFrame.Raised)
 
         urllist = piccheck_data.get_picurl(self.taskid, self.roomid)
+        task_list = []
 
         self.label_3 = QLabel(self.frame)
         self.label_3.setObjectName(u"label_3")
@@ -90,7 +93,7 @@ class Ui_PicCheck(QWidget):
                                    "border-top-left-radius:15px;")
         self.label_3.setAlignment(Qt.AlignCenter)
         if len(urllist) >= 1:
-            self.visible_pic(urllist[0][0], self.label_3)
+            task_list.append(self.visible_pic(urllist[0][0], self.label_3))
         else:
             self.label_3.setText(QCoreApplication.translate(
                 "Form", u"\u6682\u65e0", None))
@@ -105,7 +108,7 @@ class Ui_PicCheck(QWidget):
                                    "border-bottom-left-radius:15px;")
         self.label_4.setAlignment(Qt.AlignCenter)
         if len(urllist) >= 3:
-            self.visible_pic(urllist[2][0], self.label_4)
+            task_list.append(self.visible_pic(urllist[2][0], self.label_4))
         else:
             self.label_4.setText(QCoreApplication.translate(
                 "Form", u"\u6682\u65e0", None))
@@ -120,7 +123,7 @@ class Ui_PicCheck(QWidget):
                                    "border-bottom-right-radius:15px;")
         self.label_5.setAlignment(Qt.AlignCenter)
         if len(urllist) >= 4:
-            self.visible_pic(urllist[3][0], self.label_5)
+            task_list.append(self.visible_pic(urllist[3][0], self.label_5))
         else:
             self.label_5.setText(QCoreApplication.translate(
                 "Form", u"\u6682\u65e0", None))
@@ -135,7 +138,7 @@ class Ui_PicCheck(QWidget):
                                    "border-top-right-radius:15px;")
         self.label_6.setAlignment(Qt.AlignCenter)
         if len(urllist) >= 2:
-            self.visible_pic(urllist[1][0], self.label_6)
+            task_list.append(self.visible_pic(urllist[1][0], self.label_6))
         else:
             self.label_6.setText(QCoreApplication.translate(
                 "Form", u"\u6682\u65e0", None))
@@ -150,17 +153,24 @@ class Ui_PicCheck(QWidget):
                                         "font-weight:bold;\n"
                                         "border-radius:15px;")
 
+        asyncio.run(asyncio.wait(task_list))
         self.pushButton_2.clicked.connect(Form.close)
         self.retranslateUi(Form)
 
         QMetaObject.connectSlotsByName(Form)
 
-    def visible_pic(self, url, widget):
+    async def visible_pic(self, url, widget):
         print(url)
-        res = requests.post(url)
-        image = Image.open(io.BytesIO(res.content))
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url) as resp:
+                # print(resp.status)
+                res = await resp.read()
+                image = Image.open(io.BytesIO(res))
         width, height = image.size
-        image = image.resize((widget.width(), int(widget.width() / width * height)), Image.LANCZOS)
+        if width <= height:
+            image = image.resize((widget.width(), int(widget.width() / width * height)), Image.LANCZOS)
+        else:
+            image = image.resize((int(widget.height() / height * width), widget.height()), Image.LANCZOS)
         image = image.crop((0, 0, widget.width(), widget.height()))
         image = image.convert('RGB')
         image = ImageQt.ImageQt(image)
