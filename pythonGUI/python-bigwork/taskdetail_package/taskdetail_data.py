@@ -39,17 +39,18 @@ def get_taskname(taskid: str):
         conn.close()
 
 
-def check_complete(taskid, roomid) -> bool:
+def check_complete(taskid, roomid, stcode) -> bool:
     """
     已读任务
     """
     conn = pymysql.connect(host='sh-cdb-3chov2j0.sql.tencentcdb.com', port=58932, user='root', password='Qqhh11191911',
                            database='obj_bigwork', charset='utf8')
     cursor = conn.cursor()
-    sql = "update PicURL set isConfirmed=1 where TaskID = %s and StudentCode in (select StudentCode from Students " \
+    sql = "update PicURL set isConfirmed=1,CheckStudentCode=%s where TaskID = %s and StudentCode in (select " \
+          "StudentCode from Students " \
           "where RoomID = %s) "
     try:
-        cursor.execute(sql, (taskid, roomid))
+        cursor.execute(sql, (stcode, taskid, roomid))
         conn.commit()
         return True
     except Exception as e:
@@ -80,5 +81,5 @@ def delete_complete(taskid, roomid) -> bool:
 
 
 if __name__ == "__main__":
-    check_complete('2', '1')
+    print(get_roomcompletesitui_fromtask('2'))
     print("ok")

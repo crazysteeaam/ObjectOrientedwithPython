@@ -34,6 +34,7 @@ class Ui_ErrorMessageBox(QWidget):
         self.resize(696, 396)
         self.setWindowFlags(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
+        self.setWindowIcon(QIcon("./icons/logo.png"))
         self.label_backwhite = QLabel(self)
         self.label_backwhite.setObjectName(u"label_backwhite")
         self.label_backwhite.setGeometry(QRect(110, 90, 441, 181))

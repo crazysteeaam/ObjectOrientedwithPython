@@ -9,6 +9,7 @@ if __name__ == "__main__":
     plugin_path = os.path.join(dirname, 'plugins', 'platforms')
     print(plugin_path)
     os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = plugin_path
+
     app = QApplication([])
     QApplication.processEvents()
     window = loginui.My_Window()

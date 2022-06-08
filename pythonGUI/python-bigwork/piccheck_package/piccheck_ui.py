@@ -62,6 +62,7 @@ class Ui_PicCheck(My_Window):
         Form.resize(565, 554)
         Form.setWindowFlags(Qt.FramelessWindowHint)
         Form.setAttribute(Qt.WA_TranslucentBackground)
+        Form.setWindowIcon(QIcon("./icons/logo.png"))
         self.label = QLabel(Form)
         self.label.setObjectName(u"label")
         self.label.setGeometry(QRect(40, 30, 484, 493))

@@ -86,7 +86,28 @@ class Ui_Dormlist(My_Window):
         self.scrollArea_4.setObjectName(u"scrollArea_4")
         self.scrollArea_4.setGeometry(QRect(60, 110, 431, 401))
         self.scrollArea_4.setStyleSheet(u"background-color:transparent;\n"
-                                        "border:0px;")
+                                        " border:none;\n"
+                                        "\n"
+                                        "QScrollBar::vertical {\n"
+                                        "    background-color: transparent;\n"
+                                        "    width:5px;\n"
+                                        "    border-radius:15px;\n"
+                                        "    border-image: url();\n"
+                                        "    border:0px;\n"
+                                        "}\n"
+                                        "\n"
+                                        "QScrollBar::handle:vertical {\n"
+                                        "    border-radius: 3px;\n"
+                                        "	 background: #D8D8D8;;\n"
+                                        "}\n"
+                                        "\n"
+                                        "QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {\n"
+                                        "    border: 1px solid grey;\n"
+                                        "    width: 3px;\n"
+                                        "    height: 3px;\n"
+                                        "    background: white;\n"
+                                        "}\n"
+                                        "")
         self.scrollArea_4.setWidgetResizable(True)
         self.scrollAreaWidgetContents_4 = QWidget()
         self.scrollAreaWidgetContents_4.setObjectName(
@@ -174,7 +195,7 @@ class Ui_Dormlist(My_Window):
             if i != len(roominf_list) - 1:
                 self.label_7.setStyleSheet(u"border-bottom:1px solid #eaeaea;")
             self.label_7.setAlignment(Qt.AlignCenter)
-            self.label_7.setText(str(round(roominf_list[i][2],2) * 100) + "%")
+            self.label_7.setText(str(round(roominf_list[i][2], 2) * 100) + "%")
 
             self.gridLayout_4.addWidget(self.label_7, i + 1, 2, 1, 1)
 

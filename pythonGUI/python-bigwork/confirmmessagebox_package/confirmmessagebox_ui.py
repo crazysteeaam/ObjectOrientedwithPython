@@ -55,6 +55,7 @@ class Ui_ConfirmMessageBox(My_Window):
         if not Form.objectName():
             Form.setObjectName(u"Form")
         Form.resize(543, 396)
+        Form.setWindowIcon(QIcon("./icons/logo.png"))
         Form.setWindowFlags(Qt.FramelessWindowHint)
         Form.setAttribute(Qt.WA_TranslucentBackground)
         self.label_erroricon = QLabel(Form)

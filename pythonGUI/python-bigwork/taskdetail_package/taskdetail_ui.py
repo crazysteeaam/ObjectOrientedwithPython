@@ -49,9 +49,10 @@ class My_Window(QWidget):
 
 
 class Ui_TaskDetail(My_Window):
-    def __init__(self, parent, taskid):
+    def __init__(self, parent, taskid, stcode):
         super().__init__()
         self.taskid = taskid
+        self.studentcode = stcode
         self.setupUi(self)
 
     def setupUi(self, Form):
@@ -86,7 +87,28 @@ class Ui_TaskDetail(My_Window):
         self.scrollArea_4.setObjectName(u"scrollArea_4")
         self.scrollArea_4.setGeometry(QRect(50, 90, 431, 401))
         self.scrollArea_4.setStyleSheet(u"background-color:transparent;\n"
-                                        "border:0px;")
+                                        " border:none;\n"
+                                        "\n"
+                                        "QScrollBar::vertical {\n"
+                                        "    background-color: transparent;\n"
+                                        "    width:5px;\n"
+                                        "    border-radius:15px;\n"
+                                        "    border-image: url();\n"
+                                        "    border:0px;\n"
+                                        "}\n"
+                                        "\n"
+                                        "QScrollBar::handle:vertical {\n"
+                                        "    border-radius: 3px;\n"
+                                        "	 background: #D8D8D8;;\n"
+                                        "}\n"
+                                        "\n"
+                                        "QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {\n"
+                                        "    border: 1px solid grey;\n"
+                                        "    width: 3px;\n"
+                                        "    height: 3px;\n"
+                                        "    background: white;\n"
+                                        "}\n"
+                                        "")
         self.scrollArea_4.setWidgetResizable(True)
         self.scrollAreaWidgetContents_4 = QWidget()
         self.scrollAreaWidgetContents_4.setObjectName(u"scrollAreaWidgetContents_4")
@@ -154,7 +176,7 @@ class Ui_TaskDetail(My_Window):
         # 表格内容
         for i in range(len(complete_situation_list)):
             self.label_5 = QLabel(self.gridLayoutWidget_3)
-            self.label_5.setObjectName(u"label_" + str(complete_situation_list[i][1]) + "_1")
+            self.label_5.setObjectName(u"label_" + str(complete_situation_list[i][0]) + "_1")
             self.label_5.setStyleSheet(u"border-bottom:1px solid #eaeaea;")
             self.label_5.setAlignment(Qt.AlignCenter)
             self.label_5.setText(complete_situation_list[i][1])
@@ -162,7 +184,7 @@ class Ui_TaskDetail(My_Window):
             self.gridLayout_4.addWidget(self.label_5, i + 1, 0, 1, 1)
 
             self.label_6 = QLabel(self.gridLayoutWidget_3)
-            self.label_6.setObjectName(u"label_" + str(complete_situation_list[i][1]) + "_2")
+            self.label_6.setObjectName(u"label_" + str(complete_situation_list[i][0]) + "_2")
             self.label_6.setStyleSheet(u"border-bottom:1px solid #eaeaea;")
             self.label_6.setAlignment(Qt.AlignCenter)
             self.label_6.setText(complete_situation_list[i][2])
@@ -171,14 +193,14 @@ class Ui_TaskDetail(My_Window):
 
             if complete_situation_list[i][2] != '/':
                 self.frame = QFrame(self.gridLayoutWidget_3)
-                self.frame.setObjectName(u"frame_" + str(complete_situation_list[i][1]) + "_1")
+                self.frame.setObjectName(u"frame_" + str(complete_situation_list[i][0]) + "_1")
                 self.frame.setStyleSheet(u"QFrame{\n"
                                          "	border-bottom:1px solid #eaeaea;\n"
                                          "};")
                 self.frame.setFrameShape(QFrame.StyledPanel)
                 self.frame.setFrameShadow(QFrame.Raised)
                 self.pushButton = QPushButton(self.frame)
-                self.pushButton.setObjectName(u"pushButton_" + str(complete_situation_list[i][1]) + "_1")
+                self.pushButton.setObjectName(u"pushButton_" + str(complete_situation_list[i][0]) + "_1")
                 self.pushButton.setGeometry(QRect(20, 3, 51, 21))
                 self.pushButton.setCursor(QCursor(Qt.PointingHandCursor))
                 self.pushButton.setStyleSheet(u"border-radius:10px;\n"
@@ -188,7 +210,7 @@ class Ui_TaskDetail(My_Window):
                 self.pushButton.clicked.connect(functools.partial(self.pic_check, complete_situation_list[i][0]))
 
                 self.pushButton_2 = QPushButton(self.frame)
-                self.pushButton_2.setObjectName(u"pushButton_" + str(complete_situation_list[i][1]) + "_2")
+                self.pushButton_2.setObjectName(u"pushButton_" + str(complete_situation_list[i][0]) + "_2")
                 self.pushButton_2.setGeometry(QRect(80, 3, 51, 21))
                 self.pushButton_2.setCursor(QCursor(Qt.PointingHandCursor))
                 self.pushButton_2.setStyleSheet(u"border-radius:10px;\n"
@@ -200,14 +222,15 @@ class Ui_TaskDetail(My_Window):
                 self.gridLayout_4.addWidget(self.frame, i + 1, 2, 1, 1)
             else:
                 self.label_10 = QLabel(self.gridLayoutWidget_3)
-                self.label_10.setObjectName(u"label_" + str(complete_situation_list[i][1]) + "_3")
+                self.label_10.setObjectName(u"label_" + str(complete_situation_list[i][0]) + "_3")
+                self.label_10.setStyleSheet(u"border-bottom:1px solid #eaeaea;")
                 self.label_10.setAlignment(Qt.AlignCenter)
                 self.label_10.setText("未完成")
 
                 self.gridLayout_4.addWidget(self.label_10, i + 1, 2, 1, 1)
 
             self.label_66 = QLabel(self.gridLayoutWidget_3)
-            self.label_66.setObjectName(u"label_" + str(complete_situation_list[i][1]) + "_4")
+            self.label_66.setObjectName(u"label_" + str(complete_situation_list[i][0]) + "_4")
             self.label_66.setStyleSheet(u"border-bottom:1px solid #eaeaea;")
             self.label_66.setAlignment(Qt.AlignCenter)
             if complete_situation_list[i][3] == 0.5:
@@ -246,7 +269,8 @@ class Ui_TaskDetail(My_Window):
         # 查看图片按钮
         print(roomid)
         print(self.taskid)
-        if taskdetail_data.check_complete(str(self.taskid), str(roomid)):
+        if taskdetail_data.check_complete(str(self.taskid), str(roomid), self.studentcode):
+            self.scrollArea_4.findChild(QLabel,"label_" + str(roomid) + "_4").setText("已核验")
             self.New_Window = piccheck_ui.My_Window()
             self.ui = piccheck_ui.Ui_PicCheck(self.New_Window, self.taskid, roomid)
             self.ui.show()
