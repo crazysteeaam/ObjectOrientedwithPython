@@ -20,6 +20,9 @@ from PySide6.QtWidgets import (QApplication, QLabel, QPushButton, QSizePolicy,
 import errormessagebox_package.resource_errormessagebox as resource_errormessagebox
 import os
 import PySide6
+import ctypes
+
+ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("myappid")
 
 
 class Ui_ErrorMessageBox(QWidget):
@@ -69,6 +72,7 @@ class Ui_ErrorMessageBox(QWidget):
 
         self.retranslateUi()
 
+        self.setWindowTitle("错误提示窗口")
         QMetaObject.connectSlotsByName(self)
         self.setWindowTitle("警告")
 

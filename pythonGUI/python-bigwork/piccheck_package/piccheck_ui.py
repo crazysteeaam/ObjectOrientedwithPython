@@ -24,6 +24,9 @@ from PIL import Image, ImageQt
 import io
 import asyncio
 import aiohttp
+import ctypes
+
+ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("myappid")
 
 
 class My_Window(QWidget):
@@ -155,6 +158,8 @@ class Ui_PicCheck(My_Window):
                                         "border-radius:15px;")
 
         asyncio.run(asyncio.wait(task_list))
+
+        Form.setWindowTitle("图片查看器")
         self.pushButton_2.clicked.connect(Form.close)
         self.retranslateUi(Form)
 

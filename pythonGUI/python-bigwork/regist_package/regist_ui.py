@@ -28,8 +28,8 @@ import regist_package.resource_regist as resource_regist
 import regist_package.regist_data as regist_data
 import errormessagebox_package.errormessagebox_ui as errormessagebox_ui
 import PySide6
-import ctypes
 import re
+import ctypes
 
 ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("myappid")
 

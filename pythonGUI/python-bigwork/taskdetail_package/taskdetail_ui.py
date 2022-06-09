@@ -23,6 +23,9 @@ import piccheck_package.piccheck_ui as piccheck_ui
 import confirmmessagebox_package.confirmmessagebox_ui as confirmmessagebox_ui
 import errormessagebox_package.errormessagebox_ui as errormessagebox_ui
 import functools
+import ctypes
+
+ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("myappid")
 
 
 class My_Window(QWidget):
@@ -261,6 +264,7 @@ class Ui_TaskDetail(My_Window):
         self.pushButton_9.clicked.connect(Form.close)
         self.pushButton_10.clicked.connect(Form.showMinimized)
 
+        Form.setWindowTitle("任务完成详情")
         self.retranslateUi(Form)
 
         QMetaObject.connectSlotsByName(Form)

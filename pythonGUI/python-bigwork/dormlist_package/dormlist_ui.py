@@ -19,6 +19,9 @@ from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QLabel,
                                QPushButton, QScrollArea, QSizePolicy, QWidget)
 import dormlist_package.resource_dormlist as resource_dormlist
 import dormlist_package.dormlist_data as dormlist_data
+import ctypes
+
+ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("myappid")
 
 
 class My_Window(QWidget):
@@ -269,10 +272,14 @@ class Ui_Dormlist(My_Window):
         self.pushButton_10.setStyleSheet(
             u"border-image: url(:/icons/icons/\u6700\u5c0f\u5316.png);")
 
-        self.retranslateUi(Form)
-
         self.pushButton_9.clicked.connect(Form.close)
         self.pushButton_10.clicked.connect(Form.showMinimized)
+
+
+        Form.setWindowTitle("寝室列表")
+        self.retranslateUi(Form)
+
+
 
         QMetaObject.connectSlotsByName(Form)
 

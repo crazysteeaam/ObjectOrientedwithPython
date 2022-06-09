@@ -18,6 +18,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QLabel, QPushButton, QSizePolicy,
                                QWidget, QMainWindow, QMessageBox, QDialog)
 import confirmmessagebox_package.resource_confirmmessagebox as resource_confirmmessagebox
+import ctypes
+
+ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("myappid")
 
 
 class My_Window(QDialog):
@@ -108,6 +111,7 @@ class Ui_ConfirmMessageBox(My_Window):
         self.pushButton.clicked.connect(self.reject)
         self.pushButton_2.clicked.connect(self.accept)
 
+        Form.setWindowTitle("确认窗口")
         self.retranslateUi(Form)
 
         QMetaObject.connectSlotsByName(Form)
